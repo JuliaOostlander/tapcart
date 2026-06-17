@@ -1,0 +1,52 @@
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 16px;
+    font-weight: 800;
+}
+
+.primary-button {
+    background: var(--accent);
+    color: white;
+}
+
+.secondary-button {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+
+.button-cancel {
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid rgba(220, 38, 38, 0.18);
+    white-space: nowrap;
+}
+
+.button-cancel i {
+    margin-right: 5px;
+}
+
+.button-proceed {
+    background: rgba(255, 196, 60, 0.14);
+    color: black;
+    border: 1px solid rgba(255, 196, 60, 0.42);
+}
+
+.ghost-button {
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid rgba(220, 38, 38, 0.18);
+    white-space: nowrap;
+}
+
+.ghost-button i {
+    margin-right: 5px;
+}
+
+@media (max-width: 340px) {
+    .ghost-button {
+        margin-left: auto;
+    }
+}

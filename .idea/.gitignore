@@ -1,0 +1,26 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../:\Users\julia\Documents\University\BIT Master\2025-2026 - Year 3\2B - Quarter 4\ARP in HRI\Mobile-first shopping system\2026-05-06 - Generated code by ChatGPT - self-scan-cart\self-scan-cart\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# IntelliJ / local IDE files
+.idea/
+*.iml
+
+# Build output
+out/
+target/
+build/
+.gradle/
+
+# Compiled files
+*.class
+
+# Secrets / local config
+.env
+*.key
+*.pem

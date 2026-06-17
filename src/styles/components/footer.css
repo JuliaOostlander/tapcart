@@ -1,0 +1,20 @@
+.app-footer {
+    margin-top: 28px;
+    padding: 22px 18px;
+    background: #111827;
+    color: rgba(255, 255, 255, 0.78);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: .85rem;
+}
+
+.app-footer p {
+    margin: 0;
+}
+
+@media (max-width: 620px) {
+    .app-footer {
+        flex-direction: column;
+    }
+}

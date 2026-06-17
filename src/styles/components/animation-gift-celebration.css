@@ -1,0 +1,47 @@
+.gift-fireworks-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, .86);
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.gift-fireworks-overlay.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.gift-fireworks-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gift-fireworks-canvas {
+    position: absolute;
+    inset: 0;
+}
+
+.gift-fireworks-card {
+    position: relative;
+    z-index: 1;
+    width: min(420px, 100%);
+    padding: 32px 24px;
+    border-radius: 34px;
+    background: rgba(255, 255, 255, .92);
+    text-align: center;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .45);
+}
+
+.gift-fireworks-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+.gift-icon {
+    font-size: 5rem;
+}

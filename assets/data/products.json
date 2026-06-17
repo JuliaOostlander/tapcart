@@ -1,0 +1,1701 @@
+[
+  {
+    "id": "easter-egg-001",
+    "name": "Easter egg",
+    "category": "Special",
+    "price": 0,
+    "description": "You found a hidden Easter egg!",
+    "image": "assets/images/found-easteregg.png",
+    "specialEffect": "easterEgg",
+    "allergens": [],
+    "nutriScore": "",
+    "tags": [],
+    "countryOfOrigin": "",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "apple-001",
+    "name": "Crisp Red Apples",
+    "price": 2.49,
+    "category": "Fruit",
+    "description": "A bag of crisp red apples with a naturally sweet flavor and refreshing crunch. Great for lunchboxes, baking, or a quick snack between meals.",
+    "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "high-fiber"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 52,
+      "fat": 0.2,
+      "saturatedFat": 0.0,
+      "carbohydrates": 14.0,
+      "sugars": 10.0,
+      "protein": 0.3,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "pear-001",
+    "name": "Conference Pears",
+    "price": 2.79,
+    "category": "Fruit",
+    "description": "Juicy Conference pears with a soft bite and naturally sweet taste. Delicious on their own or sliced into salads, desserts, and breakfast bowls.",
+    "image": "https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh"
+    ],
+    "countryOfOrigin": "Belgium",
+    "nutrition": {
+      "energyKcal": 57,
+      "fat": 0.1,
+      "saturatedFat": 0.0,
+      "carbohydrates": 15.0,
+      "sugars": 10.0,
+      "protein": 0.4,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "strawberries-001",
+    "name": "Sweet Strawberries",
+    "price": 3.99,
+    "category": "Fruit",
+    "description": "Bright, sweet strawberries with a juicy texture and fresh aroma. Perfect for breakfast, desserts, smoothies, or eating straight from the punnet.",
+    "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "vitamin-c"
+    ],
+    "countryOfOrigin": "Spain",
+    "nutrition": {
+      "energyKcal": 32,
+      "fat": 0.3,
+      "saturatedFat": 0.0,
+      "carbohydrates": 7.7,
+      "sugars": 4.9,
+      "protein": 0.7,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "blueberries-001",
+    "name": "Blueberries",
+    "price": 4.49,
+    "category": "Fruit",
+    "description": "Fresh blueberries with a sweet-tart flavor and deep blue color. Great for yogurt, pancakes, smoothies, porridge, or a colorful snack.",
+    "image": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "antioxidants"
+    ],
+    "countryOfOrigin": "Poland",
+    "nutrition": {
+      "energyKcal": 57,
+      "fat": 0.3,
+      "saturatedFat": 0.0,
+      "carbohydrates": 14.0,
+      "sugars": 10.0,
+      "protein": 0.7,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "avocado-001",
+    "name": "Ripe Avocados",
+    "price": 3.49,
+    "category": "Fruit",
+    "description": "Creamy ripe avocados with a smooth texture and mild flavor. Ideal for toast, salads, guacamole, wraps, or nourishing lunch bowls.",
+    "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "B",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "healthy-fats"
+    ],
+    "countryOfOrigin": "Peru",
+    "nutrition": {
+      "energyKcal": 160,
+      "fat": 14.7,
+      "saturatedFat": 2.1,
+      "carbohydrates": 8.5,
+      "sugars": 0.7,
+      "protein": 2.0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "mango-001",
+    "name": "Fresh Mango",
+    "price": 2.99,
+    "category": "Fruit",
+    "description": "A fragrant mango with tropical sweetness and soft golden flesh. Lovely in smoothies, fruit salads, desserts, or served chilled.",
+    "image": "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "tropical",
+      "vitamin-c"
+    ],
+    "countryOfOrigin": "Brazil",
+    "nutrition": {
+      "energyKcal": 60,
+      "fat": 0.4,
+      "saturatedFat": 0.1,
+      "carbohydrates": 15.0,
+      "sugars": 14.0,
+      "protein": 0.8,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "grapes-001",
+    "name": "Seedless Grapes",
+    "price": 3.29,
+    "category": "Fruit",
+    "description": "Sweet seedless grapes with a crisp bite. Easy to snack on, share, or add to cheese boards, salads, and lunchboxes.",
+    "image": "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "snack"
+    ],
+    "countryOfOrigin": "Italy",
+    "nutrition": {
+      "energyKcal": 69,
+      "fat": 0.2,
+      "saturatedFat": 0.1,
+      "carbohydrates": 18.0,
+      "sugars": 16.0,
+      "protein": 0.7,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "kiwi-001",
+    "name": "Green Kiwis",
+    "price": 2.69,
+    "category": "Fruit",
+    "description": "Tangy green kiwis packed with bright flavor. A refreshing addition to fruit salads, breakfast bowls, smoothies, or desserts.",
+    "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "vitamin-c",
+      "fresh"
+    ],
+    "countryOfOrigin": "New Zealand",
+    "nutrition": {
+      "energyKcal": 61,
+      "fat": 0.5,
+      "saturatedFat": 0.0,
+      "carbohydrates": 15.0,
+      "sugars": 9.0,
+      "protein": 1.1,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "pineapple-001",
+    "name": "Pineapple Chunks",
+    "price": 3.79,
+    "category": "Fruit",
+    "description": "Ready-to-eat pineapple chunks with a juicy tropical flavor. Perfect for snacking, desserts, fruit bowls, or adding sweetness to savory dishes.",
+    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "ready-to-eat",
+      "tropical"
+    ],
+    "countryOfOrigin": "Costa Rica",
+    "nutrition": {
+      "energyKcal": 50,
+      "fat": 0.1,
+      "saturatedFat": 0.0,
+      "carbohydrates": 13.0,
+      "sugars": 10.0,
+      "protein": 0.5,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "oranges-001",
+    "name": "Juicy Oranges",
+    "price": 2.89,
+    "category": "Fruit",
+    "description": "A net of juicy oranges with a bright citrus flavor. Great for fresh juice, breakfast, desserts, or a naturally sweet snack.",
+    "image": "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "vitamin-c",
+      "fresh"
+    ],
+    "countryOfOrigin": "Spain",
+    "nutrition": {
+      "energyKcal": 47,
+      "fat": 0.1,
+      "saturatedFat": 0.0,
+      "carbohydrates": 12.0,
+      "sugars": 9.0,
+      "protein": 0.9,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "broccoli-001",
+    "name": "Fresh Broccoli",
+    "price": 1.89,
+    "category": "Vegetables",
+    "description": "A firm head of fresh broccoli with deep green florets. Great steamed, roasted, or added to stir-fries, pasta dishes, and vegetable trays.",
+    "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "high-fiber"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 34,
+      "fat": 0.4,
+      "saturatedFat": 0.1,
+      "carbohydrates": 7.0,
+      "sugars": 1.7,
+      "protein": 2.8,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "carrots-001",
+    "name": "Crunchy Carrots",
+    "price": 1.29,
+    "category": "Vegetables",
+    "description": "A bag of crunchy carrots with a naturally sweet flavor. Ideal for roasting, soups, salads, lunchboxes, or dipping into hummus.",
+    "image": "https://images.unsplash.com/photo-1445282768818-728615cc910a?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "beta-carotene"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 41,
+      "fat": 0.2,
+      "saturatedFat": 0.0,
+      "carbohydrates": 10.0,
+      "sugars": 4.7,
+      "protein": 0.9,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "red-peppers-001",
+    "name": "Red Bell Peppers",
+    "price": 2.59,
+    "category": "Vegetables",
+    "description": "Sweet red bell peppers with a crisp texture. Delicious raw in salads or cooked in fajitas, sauces, soups, and roasted vegetable mixes.",
+    "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "vitamin-c"
+    ],
+    "countryOfOrigin": "Spain",
+    "nutrition": {
+      "energyKcal": 31,
+      "fat": 0.3,
+      "saturatedFat": 0.0,
+      "carbohydrates": 6.0,
+      "sugars": 4.2,
+      "protein": 1.0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "spinach-001",
+    "name": "Baby Spinach",
+    "price": 2.49,
+    "category": "Vegetables",
+    "description": "Tender baby spinach leaves washed and ready to use. Perfect for salads, smoothies, omelets, wraps, or wilting into warm dishes.",
+    "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "ready-to-eat",
+      "iron"
+    ],
+    "countryOfOrigin": "Italy",
+    "nutrition": {
+      "energyKcal": 23,
+      "fat": 0.4,
+      "saturatedFat": 0.1,
+      "carbohydrates": 3.6,
+      "sugars": 0.4,
+      "protein": 2.9,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": "cherry-tomatoes-001",
+    "name": "Cherry Tomatoes",
+    "price": 2.19,
+    "category": "Vegetables",
+    "description": "Sweet cherry tomatoes with a juicy bite. Great for salads, pasta, lunchboxes, or roasting with olive oil and herbs.",
+    "image": "https://images.unsplash.com/photo-1546470427-e26264be0b0d?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "snack"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 18,
+      "fat": 0.2,
+      "saturatedFat": 0.0,
+      "carbohydrates": 3.9,
+      "sugars": 2.6,
+      "protein": 0.9,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "cucumber-001",
+    "name": "Cucumber",
+    "price": 0.99,
+    "category": "Vegetables",
+    "description": "A fresh cucumber with a mild taste and crisp texture. Ideal for salads, sandwiches, wraps, or refreshing snack slices.",
+    "image": "https://images.unsplash.com/photo-1604977042946-1eecc30f269e?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "low-calorie"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 15,
+      "fat": 0.1,
+      "saturatedFat": 0.0,
+      "carbohydrates": 3.6,
+      "sugars": 1.7,
+      "protein": 0.7,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "mushrooms-001",
+    "name": "White Mushrooms",
+    "price": 2.39,
+    "category": "Vegetables",
+    "description": "Fresh white mushrooms with a mild earthy flavor. Great in pasta, soups, omelets, sauces, or quickly fried with garlic.",
+    "image": "https://images.unsplash.com/photo-1504545102780-26774c1bb073?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "umami"
+    ],
+    "countryOfOrigin": "Poland",
+    "nutrition": {
+      "energyKcal": 22,
+      "fat": 0.3,
+      "saturatedFat": 0.1,
+      "carbohydrates": 3.3,
+      "sugars": 2.0,
+      "protein": 3.1,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "sweet-potatoes-001",
+    "name": "Sweet Potatoes",
+    "price": 2.89,
+    "category": "Vegetables",
+    "description": "Naturally sweet potatoes with orange flesh. Perfect for roasting, mashing, soups, fries, or hearty traybakes.",
+    "image": "https://images.unsplash.com/photo-1596097635121-14b63b7a0c19?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "high-fiber",
+      "comfort-food"
+    ],
+    "countryOfOrigin": "United States",
+    "nutrition": {
+      "energyKcal": 86,
+      "fat": 0.1,
+      "saturatedFat": 0.0,
+      "carbohydrates": 20.0,
+      "sugars": 4.2,
+      "protein": 1.6,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "red-onions-001",
+    "name": "Red Onions",
+    "price": 1.59,
+    "category": "Vegetables",
+    "description": "Red onions with a sharp, slightly sweet flavor. Use raw in salads or cook slowly for sauces, stews, toppings, and chutneys.",
+    "image": "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "pantry-basic"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 40,
+      "fat": 0.1,
+      "saturatedFat": 0.0,
+      "carbohydrates": 9.3,
+      "sugars": 4.2,
+      "protein": 1.1,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "zucchini-001",
+    "name": "Zucchini",
+    "price": 1.39,
+    "category": "Vegetables",
+    "description": "Mild green zucchini that works well grilled, roasted, spiralized, or added to pasta sauces, traybakes, and vegetable stir-fries.",
+    "image": "https://images.unsplash.com/photo-1596363505729-4190a9506133?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "fresh",
+      "low-calorie"
+    ],
+    "countryOfOrigin": "Spain",
+    "nutrition": {
+      "energyKcal": 17,
+      "fat": 0.3,
+      "saturatedFat": 0.1,
+      "carbohydrates": 3.1,
+      "sugars": 2.5,
+      "protein": 1.2,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "orange-juice-001",
+    "name": "Orange Juice",
+    "price": 2.99,
+    "category": "Drinks",
+    "description": "A bottle of 100% orange juice with a bright, fruity taste. Great for breakfast or as a refreshing drink during the day.",
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "vitamin-c"
+    ],
+    "countryOfOrigin": "Spain",
+    "nutrition": {
+      "energyKcal": 45,
+      "fat": 0.2,
+      "saturatedFat": 0.0,
+      "carbohydrates": 10.4,
+      "sugars": 8.4,
+      "protein": 0.7,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "sparkling-water-001",
+    "name": "Sparkling Water",
+    "price": 1.49,
+    "category": "Drinks",
+    "description": "Refreshing sparkling water with lively bubbles and no added sugar. A simple drink for meals, work, sports, or on the go.",
+    "image": "https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "sugar-free",
+      "low-calorie"
+    ],
+    "countryOfOrigin": "France",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "cola-001",
+    "name": "Classic Cola",
+    "price": 2.19,
+    "category": "Drinks",
+    "description": "A fizzy cola drink with a classic sweet flavor. Best served chilled with ice for a familiar refreshment or occasional treat.",
+    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "E",
+    "tags": [
+      "vegetarian",
+      "sweetened",
+      "treat"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 42,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 10.6,
+      "sugars": 10.6,
+      "protein": 0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "coffee-beans-001",
+    "name": "Coffee Beans",
+    "price": 8.49,
+    "category": "Drinks",
+    "description": "Medium roast coffee beans with a rounded aroma and smooth finish. Suitable for espresso machines, grinders, and filter coffee.",
+    "image": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "B",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "caffeinated",
+      "pantry"
+    ],
+    "countryOfOrigin": "Brazil",
+    "nutrition": {
+      "energyKcal": 1,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0.1,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "green-tea-001",
+    "name": "Green Tea",
+    "price": 2.89,
+    "category": "Drinks",
+    "description": "A box of gentle green tea bags with a light, fresh taste. Ideal for a calm morning, afternoon break, or after meals.",
+    "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "tea",
+      "sugar-free"
+    ],
+    "countryOfOrigin": "China",
+    "nutrition": {
+      "energyKcal": 1,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "almond-drink-001",
+    "name": "Almond Drink",
+    "price": 2.65,
+    "category": "Drinks",
+    "description": "A plant-based almond drink with a mild nutty flavor. Great in cereal, coffee, smoothies, or baking recipes.",
+    "image": "https://images.unsplash.com/photo-1600788907416-456578634209?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "nuts"
+    ],
+    "nutriScore": "B",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "plant-based",
+      "dairy-free"
+    ],
+    "countryOfOrigin": "Italy",
+    "nutrition": {
+      "energyKcal": 24,
+      "fat": 1.1,
+      "saturatedFat": 0.1,
+      "carbohydrates": 3.0,
+      "sugars": 2.7,
+      "protein": 0.5,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "iced-tea-001",
+    "name": "Peach Iced Tea",
+    "price": 2.25,
+    "category": "Drinks",
+    "description": "A chilled peach iced tea with a fruity aroma and gentle sweetness. A refreshing option for warm days and quick lunches.",
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "D",
+    "tags": [
+      "vegetarian",
+      "sweetened",
+      "refreshing"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 30,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 7.4,
+      "sugars": 7.2,
+      "protein": 0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "smoothie-berry-001",
+    "name": "Berry Smoothie",
+    "price": 3.49,
+    "category": "Drinks",
+    "description": "A ready-to-drink berry smoothie made with blended fruit. Fruity, filling, and easy to take with you on busy mornings.",
+    "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "B",
+    "tags": [
+      "vegetarian",
+      "fruit",
+      "ready-to-drink"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 62,
+      "fat": 0.4,
+      "saturatedFat": 0.1,
+      "carbohydrates": 14.0,
+      "sugars": 12.0,
+      "protein": 0.8,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "coconut-water-001",
+    "name": "Coconut Water",
+    "price": 2.79,
+    "category": "Drinks",
+    "description": "Naturally refreshing coconut water with a light tropical taste. Best served cold after sports or as a hydrating drink.",
+    "image": "https://images.unsplash.com/photo-1588413335653-34b770bca7c1?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "B",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "hydrating",
+      "tropical"
+    ],
+    "countryOfOrigin": "Thailand",
+    "nutrition": {
+      "energyKcal": 19,
+      "fat": 0.2,
+      "saturatedFat": 0.2,
+      "carbohydrates": 3.7,
+      "sugars": 2.6,
+      "protein": 0.7,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "protein-shake-001",
+    "name": "Vanilla Protein Shake",
+    "price": 3.99,
+    "category": "Drinks",
+    "description": "A creamy vanilla protein shake designed as a convenient post-workout drink or filling snack on the go.",
+    "image": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "milk"
+    ],
+    "nutriScore": "B",
+    "tags": [
+      "high-protein",
+      "vegetarian",
+      "sports"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 76,
+      "fat": 1.2,
+      "saturatedFat": 0.6,
+      "carbohydrates": 5.0,
+      "sugars": 4.8,
+      "protein": 10.0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": "potato-chips-001",
+    "name": "Sea Salt Potato Chips",
+    "price": 2.49,
+    "category": "Snacks",
+    "description": "Crispy potato chips seasoned with sea salt. A classic savory snack for sharing, movie nights, picnics, or lunchbox treats.",
+    "image": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "D",
+    "tags": [
+      "vegetarian",
+      "snack",
+      "salty",
+      "treat"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 536,
+      "fat": 34,
+      "saturatedFat": 3.2,
+      "carbohydrates": 50,
+      "sugars": 0.8,
+      "protein": 6.5,
+      "salt": 1.3
+    }
+  },
+  {
+    "id": "mixed-nuts-001",
+    "name": "Mixed Nuts",
+    "price": 4.99,
+    "category": "Snacks",
+    "description": "A crunchy mix of roasted nuts with a rich flavor. Ideal for sharing, adding to bowls, or snacking between meals.",
+    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "nuts"
+    ],
+    "nutriScore": "B",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "high-protein",
+      "snack"
+    ],
+    "countryOfOrigin": "Mixed",
+    "nutrition": {
+      "energyKcal": 607,
+      "fat": 54,
+      "saturatedFat": 7.5,
+      "carbohydrates": 20,
+      "sugars": 4.8,
+      "protein": 20,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": "dark-chocolate-001",
+    "name": "Dark Chocolate 70%",
+    "price": 2.79,
+    "category": "Snacks",
+    "description": "A rich dark chocolate bar with 70% cocoa. Smooth, intense, and perfect as a small treat after dinner.",
+    "image": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "soy",
+      "may contain milk",
+      "may contain nuts"
+    ],
+    "nutriScore": "D",
+    "tags": [
+      "vegetarian",
+      "treat",
+      "cocoa"
+    ],
+    "countryOfOrigin": "Belgium",
+    "nutrition": {
+      "energyKcal": 598,
+      "fat": 43,
+      "saturatedFat": 26,
+      "carbohydrates": 46,
+      "sugars": 25,
+      "protein": 7.8,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "granola-bars-001",
+    "name": "Granola Bars",
+    "price": 3.19,
+    "category": "Snacks",
+    "description": "Chewy granola bars with oats and honey. Easy to carry for school, work, travel, or a quick energy boost.",
+    "image": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "gluten",
+      "may contain nuts"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "portable",
+      "oats"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 420,
+      "fat": 14,
+      "saturatedFat": 3.0,
+      "carbohydrates": 64,
+      "sugars": 22,
+      "protein": 8.0,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": "rice-crackers-001",
+    "name": "Rice Crackers",
+    "price": 1.99,
+    "category": "Snacks",
+    "description": "Light and crunchy rice crackers with a mild savory taste. Great with dips, cheese, spreads, or as a simple snack.",
+    "image": "https://images.unsplash.com/photo-1614735241165-6756e1df61ab?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "soy"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "crunchy",
+      "snack"
+    ],
+    "countryOfOrigin": "Japan",
+    "nutrition": {
+      "energyKcal": 390,
+      "fat": 4.5,
+      "saturatedFat": 0.8,
+      "carbohydrates": 80,
+      "sugars": 4.0,
+      "protein": 6.0,
+      "salt": 1.6
+    }
+  },
+  {
+    "id": "hummus-001",
+    "name": "Classic Hummus",
+    "price": 2.59,
+    "category": "Snacks",
+    "description": "Creamy hummus made with chickpeas and sesame paste. Perfect with vegetables, crackers, wraps, or warm pita bread.",
+    "image": "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "sesame"
+    ],
+    "nutriScore": "B",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "plant-based",
+      "dip"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 240,
+      "fat": 17,
+      "saturatedFat": 2.4,
+      "carbohydrates": 14,
+      "sugars": 1.0,
+      "protein": 7.8,
+      "salt": 0.9
+    }
+  },
+  {
+    "id": "trail-mix-001",
+    "name": "Fruit & Nut Trail Mix",
+    "price": 4.29,
+    "category": "Snacks",
+    "description": "A sweet and crunchy trail mix with dried fruit, nuts, and seeds. Designed for hiking, studying, or long days out.",
+    "image": "https://images.unsplash.com/photo-1603046891744-1f76eb10aec1?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "nuts"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "high-energy",
+      "portable"
+    ],
+    "countryOfOrigin": "Mixed",
+    "nutrition": {
+      "energyKcal": 480,
+      "fat": 28,
+      "saturatedFat": 4.2,
+      "carbohydrates": 44,
+      "sugars": 28,
+      "protein": 13,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "popcorn-001",
+    "name": "Sweet & Salty Popcorn",
+    "price": 2.29,
+    "category": "Snacks",
+    "description": "A light popcorn snack with a sweet and salty coating. Great for sharing during films, games, or casual evenings.",
+    "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "may contain milk"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "snack",
+      "sharing"
+    ],
+    "countryOfOrigin": "United Kingdom",
+    "nutrition": {
+      "energyKcal": 430,
+      "fat": 17,
+      "saturatedFat": 2.0,
+      "carbohydrates": 62,
+      "sugars": 18,
+      "protein": 8.0,
+      "salt": 1.1
+    }
+  },
+  {
+    "id": "protein-bar-001",
+    "name": "Chocolate Protein Bar",
+    "price": 2.49,
+    "category": "Snacks",
+    "description": "A chocolate-flavored protein bar with a chewy texture. Convenient after workouts or as a filling snack between meals.",
+    "image": "https://images.unsplash.com/photo-1622484211148-7e050eaf5032?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "milk",
+      "soy",
+      "may contain nuts"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "high-protein",
+      "vegetarian",
+      "sports"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 360,
+      "fat": 12,
+      "saturatedFat": 6.0,
+      "carbohydrates": 32,
+      "sugars": 14,
+      "protein": 30,
+      "salt": 0.6
+    }
+  },
+  {
+    "id": "pretzels-001",
+    "name": "Mini Pretzels",
+    "price": 1.89,
+    "category": "Snacks",
+    "description": "Crunchy mini pretzels with a salty finish. A simple savory snack for parties, lunchboxes, or afternoon cravings.",
+    "image": "https://images.unsplash.com/photo-1563901935883-cb61f5d49be4?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "gluten"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "salty",
+      "snack"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 380,
+      "fat": 4.0,
+      "saturatedFat": 0.7,
+      "carbohydrates": 75,
+      "sugars": 3.0,
+      "protein": 10.0,
+      "salt": 2.7
+    }
+  },
+  {
+    "id": "spaghetti-001",
+    "name": "Spaghetti",
+    "price": 1.69,
+    "category": "Pantry",
+    "description": "Classic dried spaghetti for quick weeknight dinners. Pair it with tomato sauce, pesto, vegetables, or simple olive oil and garlic.",
+    "image": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "gluten"
+    ],
+    "nutriScore": "A",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "pantry-basic"
+    ],
+    "countryOfOrigin": "Italy",
+    "nutrition": {
+      "energyKcal": 350,
+      "fat": 1.5,
+      "saturatedFat": 0.3,
+      "carbohydrates": 72,
+      "sugars": 3.0,
+      "protein": 12.0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "tomato-sauce-001",
+    "name": "Tomato Pasta Sauce",
+    "price": 1.99,
+    "category": "Pantry",
+    "description": "A rich tomato pasta sauce with herbs and a smooth texture. Ideal for pasta, pizza bases, casseroles, or quick family meals.",
+    "image": "https://images.unsplash.com/photo-1626200928263-4c9a894dce4d?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "B",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "quick-meal"
+    ],
+    "countryOfOrigin": "Italy",
+    "nutrition": {
+      "energyKcal": 70,
+      "fat": 2.4,
+      "saturatedFat": 0.4,
+      "carbohydrates": 10.0,
+      "sugars": 6.0,
+      "protein": 1.6,
+      "salt": 0.8
+    }
+  },
+  {
+    "id": "basmati-rice-001",
+    "name": "Basmati Rice",
+    "price": 3.99,
+    "category": "Pantry",
+    "description": "Long-grain basmati rice with a fragrant aroma and fluffy texture. Great with curries, stir-fries, stews, and meal prep bowls.",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "pantry-basic",
+      "gluten-free"
+    ],
+    "countryOfOrigin": "India",
+    "nutrition": {
+      "energyKcal": 356,
+      "fat": 0.7,
+      "saturatedFat": 0.2,
+      "carbohydrates": 78,
+      "sugars": 0.2,
+      "protein": 7.5,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "olive-oil-001",
+    "name": "Extra Virgin Olive Oil",
+    "price": 6.49,
+    "category": "Pantry",
+    "description": "Extra virgin olive oil with a fruity aroma. Use for salads, roasting, dipping bread, or finishing warm dishes.",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "C",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "healthy-fats"
+    ],
+    "countryOfOrigin": "Spain",
+    "nutrition": {
+      "energyKcal": 884,
+      "fat": 100,
+      "saturatedFat": 14,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "rolled-oats-001",
+    "name": "Rolled Oats",
+    "price": 2.29,
+    "category": "Pantry",
+    "description": "Whole rolled oats for porridge, overnight oats, baking, or homemade granola. A versatile breakfast cupboard staple.",
+    "image": "https://images.unsplash.com/photo-1614961233913-a5113a4a34ed?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "gluten"
+    ],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "high-fiber",
+      "breakfast"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 389,
+      "fat": 6.9,
+      "saturatedFat": 1.2,
+      "carbohydrates": 66,
+      "sugars": 1.0,
+      "protein": 16.9,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "peanut-butter-001",
+    "name": "Peanut Butter",
+    "price": 3.49,
+    "category": "Pantry",
+    "description": "Smooth peanut butter made from roasted peanuts. Great on toast, in smoothies, sauces, baking, or as a filling snack spread.",
+    "image": "https://images.unsplash.com/photo-1607252502531-4e44367e10b1?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "peanuts"
+    ],
+    "nutriScore": "C",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "high-protein"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 588,
+      "fat": 50,
+      "saturatedFat": 10,
+      "carbohydrates": 20,
+      "sugars": 9,
+      "protein": 25,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": "chickpeas-001",
+    "name": "Canned Chickpeas",
+    "price": 1.29,
+    "category": "Pantry",
+    "description": "Tender canned chickpeas ready for salads, curries, hummus, soups, or roasted snacks. A convenient plant-based protein.",
+    "image": "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "A",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "plant-based",
+      "high-protein"
+    ],
+    "countryOfOrigin": "Italy",
+    "nutrition": {
+      "energyKcal": 120,
+      "fat": 2.0,
+      "saturatedFat": 0.2,
+      "carbohydrates": 16,
+      "sugars": 0.5,
+      "protein": 7.0,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": "coconut-milk-001",
+    "name": "Coconut Milk",
+    "price": 1.99,
+    "category": "Pantry",
+    "description": "Creamy coconut milk for curries, soups, desserts, and sauces. Adds a rich tropical flavor to both sweet and savory dishes.",
+    "image": "https://images.unsplash.com/photo-1580984969071-a8da5656c2fb?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "D",
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "plant-based",
+      "creamy"
+    ],
+    "countryOfOrigin": "Thailand",
+    "nutrition": {
+      "energyKcal": 190,
+      "fat": 18,
+      "saturatedFat": 16,
+      "carbohydrates": 3.0,
+      "sugars": 2.0,
+      "protein": 2.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": "flour-001",
+    "name": "Plain Flour",
+    "price": 1.19,
+    "category": "Pantry",
+    "description": "Plain wheat flour for baking cakes, breads, pancakes, sauces, and homemade doughs. A basic ingredient for many recipes.",
+    "image": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [
+      "gluten"
+    ],
+    "nutriScore": "A",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "baking",
+      "pantry-basic"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 364,
+      "fat": 1.0,
+      "saturatedFat": 0.2,
+      "carbohydrates": 76,
+      "sugars": 0.3,
+      "protein": 10.0,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "honey-001",
+    "name": "Wildflower Honey",
+    "price": 4.79,
+    "category": "Pantry",
+    "description": "Golden wildflower honey with a floral sweetness. Lovely in tea, yogurt, porridge, baking, or drizzled over toast.",
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "D",
+    "tags": [
+      "vegetarian",
+      "sweetener",
+      "breakfast"
+    ],
+    "countryOfOrigin": "France",
+    "nutrition": {
+      "energyKcal": 304,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 82,
+      "sugars": 82,
+      "protein": 0.3,
+      "salt": 0.0
+    }
+  },
+  {
+    "id": "dish-soap-001",
+    "name": "Lemon Dish Soap",
+    "price": 2.99,
+    "category": "Household",
+    "description": "A lemon-scented dish soap designed to cut through grease and leave dishes clean. Suitable for everyday kitchen washing.",
+    "image": "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "cleaning",
+      "kitchen",
+      "non-food"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "paper-towels-001",
+    "name": "Paper Towels",
+    "price": 4.99,
+    "category": "Household",
+    "description": "Absorbent paper towels for spills, cleaning, and kitchen use. A practical household essential for everyday messes.",
+    "image": "https://images.unsplash.com/photo-1583947581924-a31f0f4e13eb?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "cleaning",
+      "paper",
+      "non-food"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "laundry-detergent-001",
+    "name": "Laundry Detergent",
+    "price": 9.99,
+    "category": "Household",
+    "description": "Fresh-scented laundry detergent for everyday washing. Designed to clean clothes effectively and leave fabrics smelling clean.",
+    "image": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "laundry",
+      "cleaning",
+      "non-food"
+    ],
+    "countryOfOrigin": "Belgium",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "hand-soap-001",
+    "name": "Hand Soap",
+    "price": 2.49,
+    "category": "Household",
+    "description": "Gentle liquid hand soap with a fresh scent. Suitable for bathrooms and kitchens for regular hand washing.",
+    "image": "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "bathroom",
+      "cleaning",
+      "non-food"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "toilet-paper-001",
+    "name": "Toilet Paper",
+    "price": 5.99,
+    "category": "Household",
+    "description": "Soft toilet paper rolls for everyday household use. Designed to be comfortable, absorbent, and practical.",
+    "image": "https://images.unsplash.com/photo-1584556812952-905ffd0c611a?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "bathroom",
+      "paper",
+      "non-food"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "trash-bags-001",
+    "name": "Trash Bags",
+    "price": 3.99,
+    "category": "Household",
+    "description": "Durable household trash bags suitable for kitchen bins and general waste. Easy to tie and resistant to tearing.",
+    "image": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "cleaning",
+      "kitchen",
+      "non-food"
+    ],
+    "countryOfOrigin": "Poland",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "all-purpose-cleaner-001",
+    "name": "All-Purpose Cleaner",
+    "price": 3.49,
+    "category": "Household",
+    "description": "A versatile all-purpose cleaner for counters, tables, and hard surfaces. Useful for quick everyday cleaning around the home.",
+    "image": "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "cleaning",
+      "surface-care",
+      "non-food"
+    ],
+    "countryOfOrigin": "Netherlands",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "sponges-001",
+    "name": "Kitchen Sponges",
+    "price": 1.79,
+    "category": "Household",
+    "description": "A pack of kitchen sponges for washing dishes, wiping counters, and handling everyday cleaning tasks.",
+    "image": "https://images.unsplash.com/photo-1622482871289-4f33be4de31a?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "cleaning",
+      "kitchen",
+      "non-food"
+    ],
+    "countryOfOrigin": "China",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "toothpaste-001",
+    "name": "Mint Toothpaste",
+    "price": 2.89,
+    "category": "Household",
+    "description": "Mint toothpaste for daily brushing. Designed to leave teeth feeling clean and breath fresh after use.",
+    "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "bathroom",
+      "personal-care",
+      "non-food"
+    ],
+    "countryOfOrigin": "Germany",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "shampoo-001",
+    "name": "Gentle Shampoo",
+    "price": 4.49,
+    "category": "Household",
+    "description": "A gentle shampoo for regular hair washing. Leaves hair feeling clean, soft, and lightly scented.",
+    "image": "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "bathroom",
+      "personal-care",
+      "non-food"
+    ],
+    "countryOfOrigin": "France",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "golden-ticket",
+    "name": "Golden Ticket",
+    "price": 0,
+    "category": "Special",
+    "description": "You discovered a rare Golden Ticket! This hidden reward appears only occasionally and unlocks a special celebration animation.",
+    "image": "assets/images/products/mystery-box.png",
+    "specialEffect": "gift",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "reward",
+      "limited",
+      "surprise"
+    ],
+    "countryOfOrigin": "Demo",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
+    "id": "mystery-box",
+    "name": "Mystery Box",
+    "price": 0,
+    "category": "Special",
+    "description": "A glowing mystery box with a surprise inside. Scan it to trigger the gift celebration and add a playful moment to the shopping journey.",
+    "image": "assets/images/products/mystery-box.png",
+    "specialEffect": "gift",
+    "allergens": [],
+    "nutriScore": "N/A",
+    "tags": [
+      "reward",
+      "mystery",
+      "surprise"
+    ],
+    "countryOfOrigin": "Demo",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  }
+]

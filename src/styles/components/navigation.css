@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+}
+
+.app-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 6px;
+    background: rgba(246, 241, 234, 0.94);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+.navbar-title {
+    font-weight: 900;
+}
+
+.navbar-checkout-button {
+    padding: 9px 13px;
+}
+
+.side-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, .80);
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.side-menu.is-closed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.side-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.side-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 6px;
+}
+
+.side-menu-close {
+    flex: 0 0 auto;
+}
+
+.side-menu-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 14px;
+    border: 0;
+    background: transparent;
+    color: white;
+    text-align: left;
+    font-weight: 900;
+    border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+
+.side-menu-icon {
+    font-size: 1.1rem;
+    opacity: .85;
+}
+
+.menu-button {
+    background: rgba(255, 255, 255, 0.65);
+    color: #444;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.app-page {
+    display: none;
+}
+
+.app-page.is-active {
+    display: grid;
+    gap: 18px;
+}
+
+.about-page-card {
+    padding: 26px;
+}
+
+.about-logo {
+    display: block;
+    width: clamp(90px, 30vw, 160px);
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.about-lead {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.about-section {
+    margin-top: 22px;
+}
+
+.about-section h2 {
+    margin: 0 0 12px;
+}
+
+.about-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 26px;
+    justify-content: center;
+}
+
+.about-highlights div {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.58);
+    border: 1px solid var(--line);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.about-steps {
+    display: grid;
+    gap: 12px;
+}
+
+.about-step {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .58);
+}
+
+.about-step-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.about-step h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+}
+
+.about-step p,
+.legal-notice p {
+    color: var(--muted);
+    margin: 0 0 14px;
+    line-height: 1.7;
+}
+
+.legal-notice {
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+}
+
+.settings-page-card,.manual-testing-page-card, .mini-game-asap-page-card {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-field {
+    display: grid;
+    gap: 8px;
+    margin: 22px 0;
+    font-weight: 800;
+    width: 100%;
+    position: relative;
+}
+
+.settings-field select {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: white;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px 42px 12px 14px;
+}
+
+.settings-note {
+    color: var(--muted);
+}

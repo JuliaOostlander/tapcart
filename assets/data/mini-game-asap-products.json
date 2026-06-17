@@ -1,0 +1,26 @@
+[
+  {
+    "id": "apple-001",
+    "name": "Crisp Red Apples",
+    "price": 2.49,
+    "category": "Fruit",
+    "description": "A bag of crisp red apples with a naturally sweet flavor and refreshing crunch. Great for lunchboxes, baking, or a quick snack between meals.",
+    "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "pear-001",
+    "name": "Conference Pears",
+    "price": 2.79,
+    "category": "Fruit",
+    "description": "Juicy Conference pears with a soft bite and naturally sweet taste. Delicious on their own or sliced into salads, desserts, and breakfast bowls.",
+    "image": "https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "strawberries-001",
+    "name": "Sweet Strawberries",
+    "price": 3.99,
+    "category": "Fruit",
+    "description": "Bright, sweet strawberries with a juicy texture and fresh aroma. Perfect for breakfast, desserts, smoothies, or eating straight from the punnet.",
+    "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80"
+  }
+]

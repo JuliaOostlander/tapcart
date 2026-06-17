@@ -1,0 +1,289 @@
+[
+  {
+    "id": "banana-001",
+    "name": "Organic Bananas",
+    "price": 1.49,
+    "category": "Fruit",
+    "description": "A small bunch of ripe organic bananas. Great for breakfast or smoothies.",
+    "image": "https://images.unsplash.com/photo-1603833665858-e61d17a86224?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "easterEgg"
+  },
+  {
+    "id": "bread-001",
+    "name": "Sourdough Bread",
+    "price": 3.25,
+    "category": "Bakery",
+    "description": "Fresh sourdough loaf with a crisp crust and soft center.",
+    "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none"
+  },
+  {
+    "id": "milk-001",
+    "name": "Oat Milk",
+    "price": 2.35,
+    "category": "Drinks",
+    "description": "Creamy oat milk for coffee, cereal, or baking.",
+    "image": "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none"
+  },
+  {
+    "id": "pasta-001",
+    "name": "Penne Pasta",
+    "price": 1.85,
+    "category": "Pantry",
+    "description": "Classic penne pasta for quick weeknight dinners.",
+    "image": "https://images.unsplash.com/photo-1551462147-37885acc36f1?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "none"
+  },
+  {
+    "id": "easter-egg-001",
+    "name": "Easter egg",
+    "category": "Special",
+    "price": 0,
+    "description": "You found a hidden Easter egg!",
+    "image": "https://images.unsplash.com/photo-1551462147-37885acc36f1?auto=format&fit=crop&w=800&q=80",
+    "specialEffect": "easterEgg"
+  },
+  [
+    {
+      "id": "whole-milk",
+      "name": "Whole Milk",
+      "price": 2.39,
+      "category": "Dairy",
+      "description": "Fresh whole milk.",
+      "image": "assets/images/products/whole-milk.jpg"
+    },
+    {
+      "id": "greek-yogurt",
+      "name": "Greek Yogurt",
+      "price": 3.49,
+      "category": "Dairy",
+      "description": "Creamy Greek-style yogurt.",
+      "image": "assets/images/products/greek-yogurt.jpg"
+    },
+    {
+      "id": "cheddar-cheese",
+      "name": "Cheddar Cheese",
+      "price": 4.29,
+      "category": "Dairy",
+      "description": "Mature cheddar cheese block.",
+      "image": "assets/images/products/cheddar-cheese.jpg"
+    },
+    {
+      "id": "brown-bread",
+      "name": "Brown Bread",
+      "price": 2.19,
+      "category": "Bakery",
+      "description": "Freshly baked brown bread.",
+      "image": "assets/images/products/brown-bread.jpg"
+    },
+    {
+      "id": "croissants",
+      "name": "Butter Croissants",
+      "price": 3.99,
+      "category": "Bakery",
+      "description": "Flaky butter croissants.",
+      "image": "assets/images/products/croissants.jpg"
+    },
+    {
+      "id": "free-range-eggs",
+      "name": "Free Range Eggs",
+      "price": 3.79,
+      "category": "Dairy",
+      "description": "Box of 10 free-range eggs.",
+      "image": "assets/images/products/free-range-eggs.jpg"
+    },
+    {
+      "id": "chicken-breast",
+      "name": "Chicken Breast",
+      "price": 7.49,
+      "category": "Meat",
+      "description": "Fresh chicken breast fillets.",
+      "image": "assets/images/products/chicken-breast.jpg"
+    },
+    {
+      "id": "ground-beef",
+      "name": "Ground Beef",
+      "price": 6.99,
+      "category": "Meat",
+      "description": "Lean ground beef.",
+      "image": "assets/images/products/ground-beef.jpg"
+    },
+    {
+      "id": "salmon-fillet",
+      "name": "Salmon Fillet",
+      "price": 8.99,
+      "category": "Fish",
+      "description": "Fresh Atlantic salmon.",
+      "image": "assets/images/products/salmon-fillet.jpg"
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "price": 1.89,
+      "category": "Vegetables",
+      "description": "Fresh green broccoli.",
+      "image": "assets/images/products/broccoli.jpg"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "price": 1.29,
+      "category": "Vegetables",
+      "description": "Crunchy carrots.",
+      "image": "assets/images/products/carrots.jpg"
+    },
+    {
+      "id": "red-peppers",
+      "name": "Red Bell Peppers",
+      "price": 2.59,
+      "category": "Vegetables",
+      "description": "Sweet red peppers.",
+      "image": "assets/images/products/red-peppers.jpg"
+    },
+    {
+      "id": "avocados",
+      "name": "Avocados",
+      "price": 3.49,
+      "category": "Fruit",
+      "description": "Ripe Hass avocados.",
+      "image": "assets/images/products/avocados.jpg"
+    },
+    {
+      "id": "strawberries",
+      "name": "Strawberries",
+      "price": 3.99,
+      "category": "Fruit",
+      "description": "Sweet strawberries.",
+      "image": "assets/images/products/strawberries.jpg"
+    },
+    {
+      "id": "blueberries",
+      "name": "Blueberries",
+      "price": 4.49,
+      "category": "Fruit",
+      "description": "Fresh blueberries.",
+      "image": "assets/images/products/blueberries.jpg"
+    },
+    {
+      "id": "orange-juice",
+      "name": "Orange Juice",
+      "price": 2.99,
+      "category": "Drinks",
+      "description": "100% orange juice.",
+      "image": "assets/images/products/orange-juice.jpg"
+    },
+    {
+      "id": "sparkling-water",
+      "name": "Sparkling Water",
+      "price": 1.49,
+      "category": "Drinks",
+      "description": "Refreshing sparkling water.",
+      "image": "assets/images/products/sparkling-water.jpg"
+    },
+    {
+      "id": "cola",
+      "name": "Classic Cola",
+      "price": 2.19,
+      "category": "Drinks",
+      "description": "Carbonated cola drink.",
+      "image": "assets/images/products/cola.jpg"
+    },
+    {
+      "id": "potato-chips",
+      "name": "Potato Chips",
+      "price": 2.49,
+      "category": "Snacks",
+      "description": "Sea salt potato chips.",
+      "image": "assets/images/products/potato-chips.jpg"
+    },
+    {
+      "id": "mixed-nuts",
+      "name": "Mixed Nuts",
+      "price": 4.99,
+      "category": "Snacks",
+      "description": "Premium nut mix.",
+      "image": "assets/images/products/mixed-nuts.jpg"
+    },
+    {
+      "id": "dark-chocolate",
+      "name": "Dark Chocolate",
+      "price": 2.79,
+      "category": "Snacks",
+      "description": "70% cocoa chocolate bar.",
+      "image": "assets/images/products/dark-chocolate.jpg"
+    },
+    {
+      "id": "spaghetti",
+      "name": "Spaghetti",
+      "price": 1.69,
+      "category": "Pantry",
+      "description": "Italian spaghetti pasta.",
+      "image": "assets/images/products/spaghetti.jpg"
+    },
+    {
+      "id": "tomato-sauce",
+      "name": "Tomato Sauce",
+      "price": 1.99,
+      "category": "Pantry",
+      "description": "Rich tomato pasta sauce.",
+      "image": "assets/images/products/tomato-sauce.jpg"
+    },
+    {
+      "id": "basmati-rice",
+      "name": "Basmati Rice",
+      "price": 3.99,
+      "category": "Pantry",
+      "description": "Premium basmati rice.",
+      "image": "assets/images/products/basmati-rice.jpg"
+    },
+    {
+      "id": "olive-oil",
+      "name": "Olive Oil",
+      "price": 6.49,
+      "category": "Pantry",
+      "description": "Extra virgin olive oil.",
+      "image": "assets/images/products/olive-oil.jpg"
+    },
+    {
+      "id": "coffee-beans",
+      "name": "Coffee Beans",
+      "price": 8.49,
+      "category": "Drinks",
+      "description": "Medium roast coffee beans.",
+      "image": "assets/images/products/coffee-beans.jpg"
+    },
+    {
+      "id": "green-tea",
+      "name": "Green Tea",
+      "price": 2.89,
+      "category": "Drinks",
+      "description": "Box of green tea bags.",
+      "image": "assets/images/products/green-tea.jpg"
+    },
+    {
+      "id": "dish-soap",
+      "name": "Dish Soap",
+      "price": 2.99,
+      "category": "Household",
+      "description": "Lemon scented dish soap.",
+      "image": "assets/images/products/dish-soap.jpg"
+    },
+    {
+      "id": "paper-towels",
+      "name": "Paper Towels",
+      "price": 4.99,
+      "category": "Household",
+      "description": "Pack of paper towels.",
+      "image": "assets/images/products/paper-towels.jpg"
+    },
+    {
+      "id": "laundry-detergent",
+      "name": "Laundry Detergent",
+      "price": 9.99,
+      "category": "Household",
+      "description": "Fresh scent detergent.",
+      "image": "assets/images/products/laundry-detergent.jpg"
+    }
+  ]
+]

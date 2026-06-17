@@ -1,0 +1,25 @@
+.card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+}
+
+.hero-card {
+    padding: 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.scanner-card, .cart-card {
+    padding: 18px;
+}
+
+@media (max-width: 620px) {
+    .hero-card {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,31 @@
+.eyebrow {
+    margin: 0 0 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    line-height: .92;
+    letter-spacing: -0.08em;
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 6px;
+    letter-spacing: -0.04em;
+    margin-top: 0;
+}
+
+.-subtitle, .section-header p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
