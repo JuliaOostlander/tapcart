@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/self-scan-cart.iml" filepath="$PROJECT_DIR$/.idea/self-scan-cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tapcart.iml" filepath="$PROJECT_DIR$/.idea/tapcart.iml" />
     </modules>
   </component>
 </project>
