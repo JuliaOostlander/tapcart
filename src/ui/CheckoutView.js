@@ -60,5 +60,13 @@ export class CheckoutView {
     close() {
         this.qrCodeContainer.innerHTML = "";
         this.dialog.close();
+
+        if (this.onCloseCallback) {
+            this.onCloseCallback();
+        }
+    }
+
+    onClose(callback) {
+        this.onCloseCallback = callback;
     }
 }

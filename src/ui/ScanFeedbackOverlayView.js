@@ -58,5 +58,13 @@ export class ScanFeedbackOverlayView {
         if (this.overlay.open) {
             this.overlay.close();
         }
+
+        if (this.onCloseCallback) {
+            this.onCloseCallback();
+        }
+    }
+
+    onClose(callback) {
+        this.onCloseCallback = callback;
     }
 }

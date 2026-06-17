@@ -31,5 +31,13 @@ export class ProductDetailsPopupView {
 
     close() {
         this.els.popup.close();
+
+        if (this.onCloseCallback) {
+            this.onCloseCallback();
+        }
+    }
+
+    onClose(callback) {
+        this.onCloseCallback = callback;
     }
 }

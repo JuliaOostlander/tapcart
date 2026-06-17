@@ -47,5 +47,13 @@ export class ScannedItemView {
     close() {
         this.els.scannedItemPopup.close();
         this.currentProduct = null;
+
+        if (this.onCloseCallback) {
+            this.onCloseCallback();
+        }
+    }
+
+    onClose(callback) {
+        this.onCloseCallback = callback;
     }
 }

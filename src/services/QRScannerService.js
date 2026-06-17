@@ -7,6 +7,8 @@ export class QRScannerService {
         this.scanner = null;
         this.running = false;
         this.lastScan = {text: "", time: 0};
+        this.paused = false;
+        this.pausedUntil = 0;
     }
 
     isRunning() {
@@ -41,6 +43,8 @@ export class QRScannerService {
     }
 
     handleScanSuccess(decodedText) {
+        if (this.isPaused()) return;
+
         const now = Date.now();
         const sameRecentScan = decodedText === this.lastScan.text && now - this.lastScan.time < appSettings.scanCooldownMs;
         if (sameRecentScan) return;
@@ -52,4 +56,38 @@ export class QRScannerService {
     handleScanFailure() {
         // Ignore frequent scan failures. They happen naturally while the camera is searching.
     }
+
+    pause() {
+        this.paused = true;
+    }
+
+    resume() {
+        this.paused = false;
+        this.pausedUntil = 0;
+    }
+
+    pauseFor(milliseconds) {
+        this.paused = false;
+        this.pausedUntil = Date.now() + milliseconds;
+    }
+
+    isPaused() {
+        return this.paused || Date.now() < this.pausedUntil;
+    }
+
+    // isPaused() {
+    //     return this.paused || Date.now() < this.pausedUntil;
+    // }
+    //
+    // pauseFor(milliseconds) {
+    //     this.pausedUntil = Date.now() + milliseconds;
+    // }
+
+    // pauseFor(milliseconds) {
+    //     this.pausedUntil = Date.now() + milliseconds;
+    // }
+    //
+    // isPaused() {
+    //     return Date.now() < this.pausedUntil;
+    // }
 }

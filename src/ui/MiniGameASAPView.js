@@ -99,4 +99,8 @@ export class MiniGameASAPView {
             this.miniGameAsapFinishedDialog.close();
         }, appSettings.miniGameDurationSecondsFinishedPopupDuration * 1000);
     }
+
+    close() {
+        this.dialog.close();
+    }
 }

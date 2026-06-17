@@ -1,6 +1,6 @@
 //core
 import {els} from "./dom.js";
-import {startOptionalRemoteSettingsListener} from "./settings.js";
+import {appSettings, startOptionalRemoteSettingsListener} from "./settings.js";
 import {dataSources} from "./settings.js";
 
 //service
@@ -68,6 +68,8 @@ class TapCart {
 
         this.hasPlayedMiniGameAsap = false;
         this.isMiniGameAsapActive = false;
+        this.scannerLockCount = 0;
+        this.scannerResumeTimeoutId = null;
     }
 
     async init() {
@@ -109,6 +111,7 @@ class TapCart {
 
         this.scannedItemView.onDetails(product => {
             this.scannedItemView.onDetails(product => {
+                this.lockScanners();
                 this.productPopupView.open(product);
             });
         });
@@ -142,6 +145,11 @@ class TapCart {
             this.languageStore.setLanguage(event.target.value);
             this.toastView.show("Language saved");
         });
+
+        this.scannedItemView.onClose(() => this.unlockScanners());
+        this.productPopupView.onClose(() => this.unlockScanners());
+        this.scanFeedbackOverlayView.onClose(() => this.unlockScanners());
+        this.checkoutView.onClose(() => this.unlockScanners());
     }
 
     handleQrScan(scannedText) {
@@ -169,6 +177,7 @@ class TapCart {
             return;
         }
 
+        this.lockScanners();
         this.scannedItemView.open(product);
     }
 
@@ -179,7 +188,39 @@ class TapCart {
             this.toastView.show("Unknown product, not part of the mini game");
             return;
         }
+        this.lockScanners();
         this.scannedItemView.open(product);
+    }
+
+    lockScanners() {
+        window.clearTimeout(this.scannerResumeTimeoutId);
+        this.scannerLockCount += 1;
+
+        if (this.scannerService.isRunning()) {
+            this.scannerService.pause();
+        }
+
+        if (this.miniGameAsapScannerService.isRunning()) {
+            this.miniGameAsapScannerService.pause();
+        }
+    }
+
+    unlockScanners() {
+        this.scannerLockCount = Math.max(0, this.scannerLockCount - 1);
+
+        if (this.scannerLockCount > 0) return;
+
+        window.clearTimeout(this.scannerResumeTimeoutId);
+
+        this.scannerResumeTimeoutId = window.setTimeout(() => {
+            if (this.scannerService.isRunning()) {
+                this.scannerService.resume();
+            }
+
+            if (this.miniGameAsapScannerService.isRunning()) {
+                this.miniGameAsapScannerService.resume();
+            }
+        }, appSettings.scanTimeoutMs);
     }
 
     handleScannedItemConfirmed(product) {
@@ -188,11 +229,13 @@ class TapCart {
 
             if (!this.miniGameAsapView.isCorrectProduct(product)) {
                 this.toastView.show("Wrong product — try again");
+                this.lockScanners();
                 this.scanFeedbackOverlayView.showWrongProduct();
 
                 return;
             }
 
+            this.lockScanners();
             this.scanFeedbackOverlayView.showProductAdded(product);
 
             this.miniGameAsapView.increaseScore();
@@ -220,6 +263,7 @@ class TapCart {
             this.miniGameProductService.getRandomProduct()
         );
 
+        this.miniGameAsapScannerService.resume();
         this.miniGameAsapScannerService.start();
         this.miniGameAsapView.startTimer(() => this.endMiniGame());
     }
@@ -241,6 +285,7 @@ class TapCart {
             await this.miniGameAsapScannerService.stop();
         }
 
+        this.miniGameAsapScannerService.resume();
         this.miniGameAsapView.close();
         this.miniGameAsapView.showMiniGameAsapFinishedMessage();
     }
@@ -266,6 +311,7 @@ class TapCart {
             return;
         }
 
+        this.lockScanners();
         this.scannedItemView.open(product);
     }
 
@@ -278,6 +324,7 @@ class TapCart {
             this.giftCelebrationView.show();
             return;
         }
+        this.lockScanners();
         this.scanFeedbackOverlayView.showProductAdded(product);
     }
 
@@ -298,6 +345,7 @@ class TapCart {
 
     openProductView(productId) {
         const product = this.productService.findById(productId);
+        this.lockScanners();
         this.productPopupView.open(product);
     }
 
@@ -320,6 +368,7 @@ class TapCart {
 
         const totalPrice = this.cartStore.getTotalPrice(this.productService.getProductsById());
 
+        this.lockScanners();
         this.checkoutView.open(cartItems, totalPrice);
     }
 
