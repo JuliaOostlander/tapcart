@@ -75,7 +75,7 @@ body {
     opacity: .85;
 }
 
-.menu-button {
+.side-menu-button {
     background: rgba(255, 255, 255, 0.65);
     color: #444;
     border: 1px solid rgba(0, 0, 0, 0.10);
@@ -177,7 +177,7 @@ body {
     border-top: 1px solid var(--line);
 }
 
-.settings-page-card,.manual-testing-page-card, .mini-game-asap-page-card {
+.settings-page-card,.manual-testing-page-card, .mini-game-fast-scan-page-card {
     padding: 26px;
     display: flex;
     flex-direction: column;

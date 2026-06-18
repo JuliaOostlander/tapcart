@@ -1,43 +1,50 @@
 import {formatMoney} from "../utils/formatters.js";
 
 export class ProductDetailsPopupView {
-    constructor(els) {
-        this.els = els;
+    constructor(elements, handlers = {}) {
+        this.handlers = handlers;
+
+        this.closeButton = elements.closePopup;
+
+        this.popup = elements.popup;
+
+        this.category = elements.popupCategory;
+        this.description = elements.popupDescription;
+        this.id = elements.popupId;
+        this.image = elements.popupImage;
+        this.name = elements.popupName;
+        this.price = elements.popupPrice;
     }
 
     bindEvents() {
-        this.els.closePopup.addEventListener("click", () => this.close());
-        this.els.popup.addEventListener("click", event => {
-            if (event.target === this.els.popup) this.close();
+        this.closeButton.addEventListener("click", () => this.close());
+
+        this.popup.addEventListener("click", event => {
+            if (event.target === this.popup) this.close();
         });
     }
 
     open(product) {
         if (!product) return;
 
-        this.els.popupImage.src = product.image;
-        this.els.popupImage.alt = product.name;
-        this.els.popupCategory.textContent = product.category;
-        this.els.popupName.textContent = product.name;
-        this.els.popupDescription.textContent = product.description;
-        this.els.popupPrice.textContent = formatMoney(product.price);
-        this.els.popupId.textContent = product.id;
-        this.els.popup.showModal();
+        this.category.textContent = product.category;
+        this.description.textContent = product.description;
+        this.id.textContent = product.id;
+        this.image.alt = product.name;
+        this.image.src = product.image;
+        this.name.textContent = product.name;
+        this.price.textContent = formatMoney(product.price);
+
+        this.popup.showModal();
     }
 
     isOpen() {
-        return this.els.popup.open;
+        return this.popup.open;
     }
 
     close() {
-        this.els.popup.close();
+        this.popup.close();
 
-        if (this.onCloseCallback) {
-            this.onCloseCallback();
-        }
-    }
-
-    onClose(callback) {
-        this.onCloseCallback = callback;
+        this.handlers.onClose?.();
     }
 }

@@ -1,23 +1,23 @@
 import {appSettings} from "../settings.js";
 import {createCoinAmountHtml} from "../utils/formatters.js";
 
-export class MiniGameASAPView {
+export class MiniGameFastScanPopupView {
     constructor(elements) {
-        this.dialog = elements.miniGameAsapDialog;
-        this.startButton = elements.miniGameAsapStartButton;
-        this.score = elements.miniGameAsapScore;
-        this.timerBar = elements.miniGameAsapTimerBar;
-        this.targetImage = elements.miniGameAsapTargetImage;
-        this.targetName = elements.miniGameAsapTargetName;
-        this.targetMeta = elements.miniGameAsapTargetMeta;
-        this.miniGameAsapFinalScore = elements.miniGameAsapFinalScore;
-        this.miniGameAsapFinishedDialog = elements.miniGameAsapFinishedDialog;
+        this.dialog = elements.miniGameFastScanDialog;
+        this.gameFinalScore = elements.miniGameFastScanFinalScore;
+        this.gameFinishedPopup = elements.miniGameFastScanFinishedPopup;
+        this.score = elements.miniGameFastScanScore;
+        this.startButton = elements.miniGameFastScanStartButton;
+        this.targetImage = elements.miniGameFastScanTargetImage;
+        this.targetMeta = elements.miniGameFastScanTargetMeta;
+        this.targetName = elements.miniGameFastScanTargetName;
+        this.timerBar = elements.miniGameFastScanTimerBar;
 
         this.currentProduct = null;
         this.scoreCount = 0;
         this.timerId = null;
         this.startedAt = null;
-        this.durationMs = appSettings.miniGameDurationSeconds * 1000;
+        this.durationMs = appSettings.miniGameFastScanDurationSeconds * 1000;
     }
 
     open() {
@@ -85,22 +85,18 @@ export class MiniGameASAPView {
         }, 200);
     }
 
-    showAlreadyPlayedMiniGameAsap() {
+    showAlreadyPlayedMiniGameFastScan() {
         this.startButton.disabled = true;
         this.startButton.textContent = "Mini game completed";
         this.startButton.classList.add("is-disabled");
     }
 
-    showMiniGameAsapFinishedMessage() {
-        this.miniGameAsapFinalScore.textContent = this.scoreCount;
-        this.miniGameAsapFinishedDialog.showModal();
+    showMiniGameFastScanFinishedMessage() {
+        this.gameFinalScore.textContent = this.scoreCount;
+        this.gameFinishedPopup.showModal();
 
         setTimeout(() => {
-            this.miniGameAsapFinishedDialog.close();
-        }, appSettings.miniGameDurationSecondsFinishedPopupDuration * 1000);
-    }
-
-    close() {
-        this.dialog.close();
+            this.gameFinishedPopup.close();
+        }, appSettings.miniGameFastScanDurationSecondsFinishedPopupDuration * 1000);
     }
 }

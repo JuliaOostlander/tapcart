@@ -19,7 +19,7 @@
 <!-- Navigation bar -->
 <header class="app-navbar">
     <!--        <div class="navbar-content">-->
-    <button id="menu-button" class="button menu-button" type="button" aria-label="Open menu">
+    <button id="side-menu-button" class="button side-menu-button" type="button" aria-label="Open menu">
         ☰
     </button>
 
@@ -28,37 +28,7 @@
     <button id="checkout-button" class="button button-proceed" type="button">
         Checkout
     </button>
-    <!--        </div>-->
 </header>
-
-<!--<header class="app-navbar">-->
-<!--    <button class="button icon-button navbar-menu-button" type="button" aria-label="Open menu">-->
-<!--        ☰-->
-<!--    </button>-->
-
-<!--    <strong class="navbar-title">Self Scan</strong>-->
-
-<!--    <button id="checkout-button" class="button button-primary" type="button">-->
-<!--        Checkout-->
-<!--    </button>-->
-<!--</header>-->
-
-
-<!--&lt;!&ndash; Side menu &ndash;&gt;-->
-<!--<aside id="side-menu" class="side-menu is-closed" aria-hidden="true">-->
-<!--    <div class="side-menu-panel">-->
-<!--        <button id="side-menu-close" class="button icon-button side-menu-close" type="button">-->
-<!--            ×-->
-<!--        </button>-->
-
-<!--&lt;!&ndash;        <h2>Menu</h2>&ndash;&gt;-->
-
-<!--        <button id="about-button" class="side-menu-link" type="button">-->
-<!--            About-->
-<!--        </button>-->
-<!--    </div>-->
-<!--</aside>-->
-
 
 <!-- Side menu -->
 <aside id="side-menu" class="side-menu is-closed" aria-hidden="true">
@@ -70,7 +40,7 @@
             </button>
         </div>
 
-        <button id="home-menu-button" class="side-menu-link" type="button">
+        <button id="home-button" class="side-menu-link" type="button">
             <i class="cil-home side-menu-icon" aria-hidden="true"></i>
             TapCart
         </button>
@@ -85,7 +55,7 @@
             Manual testing
         </button>
 
-        <button id="mini-game-asap-button" class="side-menu-link" type="button">
+        <button id="mini-game-fast-scan-button" class="side-menu-link" type="button">
             <i class="cil-puzzle side-menu-icon" aria-hidden="true"></i>
             Mini-game: fast scanning
         </button>
@@ -142,7 +112,7 @@
                     <h2 id="cart-title">Your cart</h2>
                     <p id="cart-count">0 products</p>
                 </div>
-                <button id="clear-cart" class="button ghost-button" type="button">
+                <button id="clear-cart" class="button remove-button" type="button">
                     <i class="cil-trash" aria-hidden="true"></i>
                     Clear all
                 </button>
@@ -152,7 +122,7 @@
 
             <div class="cart-footer">
                 <span>Total</span>
-                <strong id="cart-total" class="coin-price-container"></strong>
+                <strong id="cart-total-price" class="coin-price-container"></strong>
             </div>
         </section>
     </section>
@@ -199,9 +169,9 @@
         </article>
     </section>
 
-    <!-- Mini game ASAP page -->
-    <section id="mini-game-asap-page" class="app-page">
-        <article class="card mini-game-asap-page-card">
+    <!-- Mini game fast scan page -->
+    <section id="mini-game-fast-scan-page" class="app-page">
+        <article class="card mini-game-fast-scan-page-card">
             <p class="eyebrow">Mini game</p>
             <h1>Scan as fast as possible!</h1>
 
@@ -211,14 +181,14 @@
                     class="mini-game-logo"
             />
 
-            <div class="mini-game-asap">
+            <div class="mini-game-fast-scan">
                 <p>
                     A product will appear on the screen. Scan the matching QR code before the time runs out.
                     The more you scan, the higher your score!
                 </p>
 
-                <div class="mini-game-asap-start-button">
-                    <button id="mini-game-asap-start" class="button primary-button" type="button">
+                <div class="mini-game-fast-scan-start-button">
+                    <button id="mini-game-fast-scan-start" class="button primary-button" type="button">
                         Start mini game
                     </button>
                 </div>
@@ -353,18 +323,19 @@
     <p>Built for interactive shopping experiments</p>
 </footer>
 
-<!-- Scan feedback animation -->
-<dialog id="scan-feedback-overlay" class="scan-feedback-overlay">
-    <div class="scan-feedback-card">
-        <p class="eyebrow" id="scan-feedback-category"></p>
-        <div class="scan-feedback-image-wrap">
-            <img id="scan-feedback-image" alt=""/>
+<!-- Scan feedback popup -->
+<dialog id="added-to-cart-feedback-popup" class="added-to-cart-feedback-popup">
+    <div class="added-to-cart-feedback-card">
+        <p class="eyebrow" id="added-to-cart-feedback-category"></p>
+        <div class="added-to-cart-feedback-image-wrap">
+            <img id="added-to-cart-feedback-image" alt=""/>
         </div>
-        <p class="scan-feedback-kicker" id="scan-feedback-kicker"></p>
-        <h2 id="scan-feedback-name"></h2>
+        <p class="added-to-cart-feedback-kicker" id="added-to-cart-feedback-kicker"></p>
+        <h2 id="added-to-cart-feedback-name"></h2>
     </div>
 </dialog>
 
+<!--currently not in use-->
 <!-- Full-screen found EasterEgg animation -->
 <section id="easter-egg-overlay" class="easter-egg-overlay is-hidden" aria-hidden="true">
     <article class="easter-egg-card">
@@ -385,7 +356,7 @@
     </article>
 </section>
 
-<!-- Fireworks popup -->
+<!-- Fireworks found easterEgg popup -->
 <section id="gift-fireworks-overlay" class="gift-fireworks-overlay is-hidden" aria-hidden="true">
     <div id="gift-fireworks-canvas" class="gift-fireworks-canvas"></div>
     <article class="gift-fireworks-card">
@@ -411,41 +382,41 @@
     </div>
 </dialog>
 
-<!--Mini game ASAP popup -->
-<dialog id="mini-game-asap-dialog" class="mini-game-asap-dialog">
-    <div class="mini-game-asap-body">
-        <div class="mini-game-asap-topbar">
+<!--Mini game fast scan popup -->
+<dialog id="mini-game-fast-scan-dialog" class="mini-game-fast-scan-dialog">
+    <div class="mini-game-fast-scan-body">
+        <div class="mini-game-fast-scan-topbar">
             <div>
                 <p class="eyebrow">Mini game</p>
                 <h2>Scan as fast as possible!</h2>
             </div>
 
-            <div class="mini-game-asap-score">
-                <i class="cil-basket mini-game-asap-score-icon" aria-hidden="true"></i>
-                <strong id="mini-game-asap-score">0</strong>
+            <div class="mini-game-fast-scan-score">
+                <i class="cil-basket mini-game-fast-scan-score-icon" aria-hidden="true"></i>
+                <strong id="mini-game-fast-scan-score">0</strong>
             </div>
         </div>
 
-        <div class="mini-game-asap-timer">
-            <div id="mini-game-asap-timer-bar"></div>
+        <div class="mini-game-fast-scan-timer">
+            <div id="mini-game-fast-scan-timer-bar"></div>
         </div>
 
-        <section class="mini-game-asap-target-card">
-            <img id="mini-game-asap-target-image" alt="Product image"/>
-            <div class="mini-game-asap-target-info">
-                <h3 id="mini-game-asap-target-name"></h3>
-                <p id="mini-game-asap-target-meta" class="mini-game-asap-target-meta"></p>
+        <section class="mini-game-fast-scan-target-card">
+            <img id="mini-game-fast-scan-target-image" alt="Product image"/>
+            <div class="mini-game-fast-scan-target-info">
+                <h3 id="mini-game-fast-scan-target-name"></h3>
+                <p id="mini-game-fast-scan-target-meta" class="mini-game-fast-scan-target-meta"></p>
             </div>
         </section>
 
         <section class="scanner-card" aria-labelledby="scanner-title">
             <div class="section-header">
                 <div>
-                    <h2 id="mini-game-asap-scanner-title">Scanner</h2>
+                    <h2 id="mini-game-fast-scan-scanner-title">Scanner</h2>
                 </div>
             </div>
 
-            <div id="mini-game-asap-reader" class="reader-placeholder">
+            <div id="mini-game-fast-scan-reader" class="reader-placeholder">
                 <div class="scanner-idle">
                     <div class="scanner-icon">▦</div>
                     <p>Scanner is off</p>
@@ -455,12 +426,12 @@
     </div>
 </dialog>
 
-<!-- Checkout popup -->
-<dialog id="checkout-dialog" class="checkout-dialog">
+<!-- Cart checkout popup -->
+<dialog id="checkout-popup" class="checkout-popup">
     <div class="checkout-body">
         <p class="eyebrow">Checkout</p>
         <h2>Ready for checkout?</h2>
-        <p id="checkout-summary"></p>
+        <p id="checkout-total-price"></p>
 
         <div id="checkout-qr-code" class="checkout-qr-code">
             <img id="checkout-image" class="checkout-image" alt=""/>
@@ -516,14 +487,14 @@
     </div>
 </dialog>
 
-<!--Completed mini game ASAP popup-->
-<dialog id="mini-game-asap-finished-dialog" class="mini-game-asap-finished-dialog">
-    <div class="mini-game-asap-finished-body">
-        <div class="mini-game-asap-finished-icon">✨</div>
+<!--Completed mini game fast scan popup-->
+<dialog id="mini-game-fast-scan-finished-popup" class="mini-game-fast-scan-finished-popup">
+    <div class="mini-game-fast-scan-finished-body">
+        <div class="mini-game-fast-scan-finished-icon">✨</div>
         <h2>Mini game completed</h2>
         <p>
             You scanned
-            <strong id="mini-game-asap-final-score">0</strong>
+            <strong id="mini-game-fast-scan-final-score">0</strong>
             products!
         </p>
     </div>

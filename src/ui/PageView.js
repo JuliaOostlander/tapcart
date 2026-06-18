@@ -1,18 +1,14 @@
 export class PageView {
     constructor(elements) {
         this.homePage = elements.homePage;
-        this.aboutPage = elements.aboutPage;
         this.settingsPage = elements.settingsPage;
         this.manualTestingPage = elements.manualTestingPage;
-        this.miniGameAsapPage = elements.miniGameAsapPage;
+        this.miniGameFastScanPage = elements.miniGameFastScanPage;
+        this.aboutPage = elements.aboutPage;
     }
 
     showHome() {
         this.showOnly(this.homePage);
-    }
-
-    showAbout() {
-        this.showOnly(this.aboutPage);
     }
 
     showSettings() {
@@ -23,8 +19,12 @@ export class PageView {
         this.showOnly(this.manualTestingPage);
     }
 
-    showMiniGameAsap() {
-        this.showOnly(this.miniGameAsapPage);
+    showMiniGameFastScan() {
+        this.showOnly(this.miniGameFastScanPage);
+    }
+
+    showAbout() {
+        this.showOnly(this.aboutPage);
     }
 
     showOnly(activePage) {
@@ -32,7 +32,7 @@ export class PageView {
             this.aboutPage,
             this.settingsPage,
             this.manualTestingPage,
-            this.miniGameAsapPage
+            this.miniGameFastScanPage
         ].forEach(page => {
             page.classList.toggle("is-active", page === activePage);
         });

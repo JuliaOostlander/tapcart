@@ -1,16 +1,27 @@
 import {formatCoins, createCoinAmountHtml} from "../utils/formatters.js";
 
 export class CartView {
-    constructor(els, callbacks) {
-        this.els = els;
-        this.callbacks = callbacks;
+    constructor(elements, handlers = {}) {
+        this.handlers = handlers;
+
+        this.clearCartButton = elements.clearCart;
+
+        this.cartItems = elements.cartItems;
+        this.cartCount = elements.cartCount;
+        this.totalPrice = elements.cartTotalPrice;
+    }
+
+    bindEvents() {
+        this.clearCartButton.addEventListener("click", () => {
+            this.handlers.onClearCart?.();
+        });
     }
 
     render(hydratedItems) {
         if (hydratedItems.length === 0) {
-            this.els.cartItems.innerHTML = `<div class="empty-state">Your scanned products will appear here</div>`;
+            this.cartItems.innerHTML = `<div class="empty-state">Your scanned products will appear here</div>`;
         } else {
-            this.els.cartItems.innerHTML = hydratedItems.map(item => this.createCartItemHtml(item)).join("");
+            this.cartItems.innerHTML = hydratedItems.map(item => this.createCartItemHtml(item)).join("");
         }
 
         this.bindCartItemEvents();
@@ -67,24 +78,24 @@ export class CartView {
     }
 
     bindCartItemEvents() {
-        this.els.cartItems.querySelectorAll("[data-open-product]").forEach(button => {
+        this.cartItems.querySelectorAll("[data-open-product]").forEach(button => {
             button.addEventListener("click", event => {
                 if (event.target.matches("[data-remove-product]")) return;
-                this.callbacks.onOpenProduct(button.dataset.openProduct);
+                this.handlers.onOpenProduct(button.dataset.openProduct);
             });
         });
 
-        this.els.cartItems.querySelectorAll("[data-remove-product]").forEach(button => {
+        this.cartItems.querySelectorAll("[data-remove-product]").forEach(button => {
             button.addEventListener("click", event => {
                 if (button.dataset.disabled) {
                     return;
                 }
                 event.stopPropagation();
-                this.callbacks.onRemoveProduct(button.dataset.removeProduct);
+                this.handlers.onRemoveProduct(button.dataset.removeProduct);
             });
         });
 
-        this.els.cartItems.querySelectorAll("[data-action]").forEach(button => {
+        this.cartItems.querySelectorAll("[data-action]").forEach(button => {
             button.addEventListener("click", event => {
                 if (button.dataset.disabled) {
                     return;
@@ -94,11 +105,11 @@ export class CartView {
                 const productId = button.dataset.productId;
 
                 if (action === "increase") {
-                    this.callbacks.onChangeQuantity(productId, 1);
+                    this.handlers.onChangeQuantity(productId, 1);
                 }
 
                 if (action === "decrease") {
-                    this.callbacks.onChangeQuantity(productId, -1);
+                    this.handlers.onChangeQuantity(productId, -1);
                 }
             });
         });
@@ -108,7 +119,7 @@ export class CartView {
         const count = hydratedItems.reduce((sum, item) => sum + item.quantity, 0);
         const total = hydratedItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-        this.els.cartCount.textContent = `${count} ${count === 1 ? "product" : "products"}`;
-        this.els.cartTotal.innerHTML = createCoinAmountHtml(total);
+        this.cartCount.textContent = `${count} ${count === 1 ? "product" : "products"}`;
+        this.totalPrice.innerHTML = createCoinAmountHtml(total);
     }
 }

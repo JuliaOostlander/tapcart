@@ -1,7 +1,15 @@
 export class ScannerView {
-    constructor(readerElement, toggleButton) {
-        this.readerElement = readerElement;
-        this.toggleButton = toggleButton;
+    constructor(elements, handlers = {}) {
+        this.handlers = handlers;
+
+        this.reader = elements.reader;
+        this.toggleButton = elements.toggleScanner;
+    }
+
+    bindEvents() {
+        this.toggleButton.addEventListener("click", () => {
+            this.handlers.onToggle?.();
+        });
     }
 
     showRunning() {
@@ -10,11 +18,11 @@ export class ScannerView {
 
     showStopped() {
         this.toggleButton.textContent = "Start scanner";
-        this.readerElement.innerHTML = `
-      <div class="scanner-idle">
-        <div class="scanner-icon">▦</div>
-        <p>Scanner is off</p>
-      </div>
-    `;
+        this.reader.innerHTML = `
+            <div class="scanner-idle">
+                <div class="scanner-icon">▦</div>
+                <p>Scanner is off</p>
+            </div>
+        `;
     }
 }

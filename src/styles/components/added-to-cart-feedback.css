@@ -1,4 +1,4 @@
-.scan-feedback-overlay {
+.added-to-cart-feedback-popup {
     width: min(430px, calc(100% - 28px));
     border: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     overflow: visible;
 }
 
-.scan-feedback-overlay::backdrop {
+.added-to-cart-feedback-popup::backdrop {
     background:
             radial-gradient(circle at 25% 20%, rgba(255, 224, 181, .96), transparent 32%),
             radial-gradient(circle at 80% 80%, rgba(215, 245, 234, .96), transparent 34%),
@@ -14,7 +14,7 @@
     backdrop-filter: blur(14px);
 }
 
-.scan-feedback-card {
+.added-to-cart-feedback-card {
     position: relative;
     width: min(430px, 100%);
     padding: 24px;
@@ -24,10 +24,10 @@
     border: 1px solid rgba(255,255,255,.72);
     box-shadow: 0 24px 80px rgba(23, 20, 18, .28);
     transform: translateY(20px) scale(.96);
-    animation: scanFeedbackPopup .42s cubic-bezier(.18, .89, .32, 1.28) forwards;
+    animation: addedToCartFeedbackPopup .42s cubic-bezier(.18, .89, .32, 1.28) forwards;
 }
 
-.scan-feedback-image-wrap {
+.added-to-cart-feedback-image-wrap {
     width: 190px;
     height: 190px;
     margin: 12px auto 18px;
@@ -37,7 +37,7 @@
     box-shadow: 0 18px 45px rgba(17,24,39,.25);
 }
 
-.scan-feedback-image-wrap img {
+.added-to-cart-feedback-image-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -45,25 +45,25 @@
     border-radius: 32px;
 }
 
-.scan-feedback-kicker {
+.added-to-cart-feedback-kicker {
     margin: 0 0 8px;
     color: var(--muted);
     font-weight: 800;
 }
 
-.scan-feedback-card h2 {
+.added-to-cart-feedback-card h2 {
     margin-bottom: 14px;
     font-size: clamp(2rem, 8vw, 3.7rem);
     line-height: .92;
     letter-spacing: -.08em;
 }
 
-@keyframes scanFeedbackPop {
+@keyframes addedToCartFeedbackPop {
     from { opacity: 0; transform: translateY(20px) scale(.96); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .scan-feedback-card { animation: none; transform: none; }
-    .scan-feedback-overlay { transition: none; }
+    .added-to-cart-feedback-card { animation: none; transform: none; }
+    .added-to-cart-feedback-popup { transition: none; }
 }

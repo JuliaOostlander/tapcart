@@ -4,14 +4,14 @@ export const appSettings = {
     scanCooldownMs: 1600,
     currency: "EUR",
     locale: "nl-NL",
-    miniGameDurationSeconds: 45,
-    miniGameDurationSecondsFinishedPopupDuration: 3,
+    miniGameFastScanDurationSeconds: 45,
+    miniGameFastScanDurationSecondsFinishedPopupDuration: 3,
     scanTimeoutMs: 1500
 };
 
 export const dataSources = {
     products: "assets/data/products.json",
-    miniGameAsapProducts: "assets/data/mini-game-asap-products.json"
+    miniGameFastScanProducts: "assets/data/mini-game-fast-scan-products.json"
 };
 
 export function startOptionalRemoteSettingsListener() {

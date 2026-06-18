@@ -1,12 +1,16 @@
 import {appSettings} from "../settings.js";
 
-export class ScanFeedbackOverlayView {
-    constructor(elements) {
-        this.overlay = elements.scanFeedbackOverlay;
-        this.image = elements.scanFeedbackImage;
-        this.category = elements.scanFeedbackCategory;
-        this.kicker = elements.scanFeedbackKicker;
-        this.name = elements.scanFeedbackName;
+export class AddedToCartFeedbackPopupView {
+    constructor(elements, handlers = {}) {
+        this.handlers = handlers;
+
+        this.popup = elements.addedToCartFeedbackPopup;
+
+        this.image = elements.addedToCartFeedbackImage;
+        this.category = elements.addedToCartFeedbackCategory;
+        this.kicker = elements.addedToCartFeedbackKicker;
+        this.name = elements.addedToCartFeedbackName;
+
         this.timeoutId = null;
     }
 
@@ -42,8 +46,8 @@ export class ScanFeedbackOverlayView {
 
         this.category.style.display = category ? "" : "none";
 
-        if (!this.overlay.open) {
-            this.overlay.showModal();
+        if (!this.popup.open) {
+            this.popup.showModal();
         }
 
         this.timeoutId = window.setTimeout(
@@ -55,16 +59,10 @@ export class ScanFeedbackOverlayView {
     close() {
         window.clearTimeout(this.timeoutId);
 
-        if (this.overlay.open) {
-            this.overlay.close();
+        if (this.popup.open) {
+            this.popup.close();
         }
 
-        if (this.onCloseCallback) {
-            this.onCloseCallback();
-        }
-    }
-
-    onClose(callback) {
-        this.onCloseCallback = callback;
+        this.handlers.onClose?.();
     }
 }

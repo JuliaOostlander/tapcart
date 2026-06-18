@@ -1,4 +1,4 @@
-.mini-game-asap-topbar {
+.mini-game-fast-scan-topbar {
     display: flex;
     justify-content: space-between;
     gap: 12px;
@@ -6,7 +6,7 @@
     text-align: left;
 }
 
-.mini-game-asap-score {
+.mini-game-fast-scan-score {
     min-width: 74px;
     padding: 10px 12px;
     border-radius: 999px;
@@ -18,36 +18,36 @@
     gap: 6px;
 }
 
-.mini-game-asap-label,
-#mini-game-asap-target-category {
+.mini-game-fast-scan-label,
+#mini-game-fast-scan-target-category {
     margin: 0;
     color: var(--muted);
     font-size: .85rem;
 }
 
-#mini-game-asap-target-name {
+#mini-game-fast-scan-target-name {
     font-size: 1rem;
     margin: 0 0 4px;
     line-height: 1.2;
 }
 
-.mini-game-asap-page-card {
+.mini-game-fast-scan-page-card {
     display: flex;
     flex-direction: column;
     padding: 26px;
 }
 
-.mini-game-asap-target-meta {
+.mini-game-fast-scan-target-meta {
     margin: 0;
     color: var(--muted);
     font-size: .9rem;
 }
 
-.mini-game-asap-target-meta .coin-price {
+.mini-game-fast-scan-target-meta .coin-price {
     margin-right: 4px;
 }
 
-.mini-game-asap-dialog {
+.mini-game-fast-scan-dialog {
     width: min(430px, calc(100% - 28px));
     border: 0;
     border-radius: 30px;
@@ -55,19 +55,19 @@
     box-shadow: var(--shadow);
 }
 
-.mini-game-asap-dialog::backdrop {
+.mini-game-fast-scan-dialog::backdrop {
     background: rgba(0, 0, 0, .42);
     backdrop-filter: blur(5px);
 }
 
-.mini-game-asap-body {
+.mini-game-fast-scan-body {
     position: relative;
     padding: 24px;
     text-align: center;
 }
 
 
-.mini-game-asap-target-card {
+.mini-game-fast-scan-target-card {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -78,7 +78,7 @@
     text-align: left;
 }
 
-.mini-game-asap-target-card img {
+.mini-game-fast-scan-target-card img {
     width: 72px;
     height: 72px;
     flex-shrink: 0;
@@ -87,14 +87,14 @@
     margin: 0;
 }
 
-.mini-game-asap-target-info {
+.mini-game-fast-scan-target-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-width: 0;
 }
 
-#mini-game-asap-reader {
+#mini-game-fast-scan-reader {
     overflow: hidden;
     border-radius: 24px;
     min-height: 290px;
@@ -102,7 +102,7 @@
     color: white;
 }
 
-.mini-game-asap-timer {
+.mini-game-fast-scan-timer {
     height: 12px;
     border-radius: 999px;
     background: rgba(0, 0, 0, .08);
@@ -110,7 +110,7 @@
     margin-bottom: 12px;
 }
 
-#mini-game-asap-timer-bar {
+#mini-game-fast-scan-timer-bar {
     height: 100%;
     width: 100%;
     border-radius: inherit;
@@ -120,7 +120,7 @@
     transition: transform .2s linear;
 }
 
-.mini-game-asap-score.is-pulsing {
+.mini-game-fast-scan-score.is-pulsing {
     animation: scorePulse .35s ease;
 }
 
@@ -131,19 +131,19 @@
     margin: 0 auto 20px;
 }
 
-.mini-game-asap-start-button{
+.mini-game-fast-scan-start-button{
     padding: 14px;
     display: flex;
     justify-content: center;
 }
 
-.mini-game-asap-start-button button:disabled,
-.mini-game-asap-start-button .is-disabled {
+.mini-game-fast-scan-start-button button:disabled,
+.mini-game-fast-scan-start-button .is-disabled {
     opacity: .45;
     cursor: not-allowed;
 }
 
-.mini-game-asap-finished-dialog {
+.mini-game-fast-scan-finished-popup {
     width: min(360px, calc(100% - 28px));
     border: 0;
     border-radius: 30px;
@@ -151,17 +151,17 @@
     box-shadow: var(--shadow);
 }
 
-.mini-game-asap-finished-dialog::backdrop {
+.mini-game-fast-scan-finished-popup::backdrop {
     background: rgba(0, 0, 0, .42);
     backdrop-filter: blur(5px);
 }
 
-.mini-game-asap-finished-body {
+.mini-game-fast-scan-finished-body {
     padding: 26px;
     text-align: center;
 }
 
-.mini-game-asap-finished-icon {
+.mini-game-fast-scan-finished-icon {
     font-size: 2rem;
     margin-bottom: 8px;
 }

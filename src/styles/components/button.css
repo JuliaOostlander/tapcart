@@ -34,19 +34,19 @@ button {
     border: 1px solid rgba(255, 196, 60, 0.42);
 }
 
-.ghost-button {
+.remove-button {
     background: transparent;
     color: var(--danger);
     border: 1px solid rgba(220, 38, 38, 0.18);
     white-space: nowrap;
 }
 
-.ghost-button i {
+.remove-button i {
     margin-right: 5px;
 }
 
 @media (max-width: 340px) {
-    .ghost-button {
+    .remove-button {
         margin-left: auto;
     }
 }

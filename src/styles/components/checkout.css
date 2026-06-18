@@ -1,4 +1,4 @@
-.checkout-dialog {
+.checkout-popup {
     width: min(430px, calc(100% - 28px));
     border: 0;
     border-radius: 30px;
@@ -6,7 +6,7 @@
     box-shadow: var(--shadow);
 }
 
-.checkout-dialog::backdrop {
+.checkout-popup::backdrop {
     background: rgba(0, 0, 0, .48);
     backdrop-filter: blur(6px);
 }
