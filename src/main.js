@@ -44,7 +44,8 @@ class TapCart {
             isMiniGameFastScanActive: false,
             scannerLockCount: 0,
             scannerResumeTimeoutId: null,
-            language: this.languageStore.getLanguage()
+            language: this.languageStore.getLanguage(),
+            selectedCameraId: localStorage.getItem("tapcartCameraId"),
         };
     }
 
@@ -91,7 +92,8 @@ class TapCart {
         });
 
         this.scannerView = new ScannerView(els, {
-            onToggle: () => this.toggleScanner()
+            onToggle: () => this.toggleScanner(),
+            onCameraSelected: cameraId => this.handleMainCameraSelected(cameraId)
         });
 
         this.sideMenuView = new SideMenuView(els, {
@@ -287,8 +289,30 @@ class TapCart {
         );
 
         this.miniGameFastScanScannerService.resume();
-        this.miniGameFastScanScannerService.start();
-        this.miniGameFastScanView.startTimer(() => this.endMiniGame());
+
+        try {
+            if (this.state.selectedCameraId) {
+                await this.miniGameFastScanScannerService.startWithCameraId(this.state.selectedCameraId);
+            } else {
+                const result = await this.miniGameFastScanScannerService.start();
+
+                if (result?.cameraId) {
+                    this.saveSelectedCameraId(result.cameraId);
+                }
+
+                if (result?.status === "camera-choice-needed") {
+                    this.toastView.show("Start the main scanner first to choose a camera");
+                    await this.endMiniGame();
+                    return;
+                }
+            }
+
+            this.miniGameFastScanView.startTimer(() => this.endMiniGame());
+        } catch (error) {
+            console.error(error);
+            this.toastView.show("Could not start mini game scanner");
+            await this.endMiniGame();
+        }
     }
 
     async endMiniGame() {
@@ -313,7 +337,6 @@ class TapCart {
         this.miniGameFastScanView.showMiniGameFastScanFinishedMessage();
     }
 
-
     async toggleScanner() {
         if (this.scannerService.isRunning()) {
             await this.scannerService.stop();
@@ -321,8 +344,62 @@ class TapCart {
             return;
         }
 
-        this.scannerService.start();
-        this.scannerView.showRunning();
+        this.scannerView.showStarting();
+
+        try {
+            const result = await this.scannerService.start(this.state.selectedCameraId);
+
+            this.scannerView.hideStarting();
+
+            if (result.status === "started" || result.status === "already-running") {
+                if (result.cameraId) {
+                    this.saveSelectedCameraId(result.cameraId);
+                }
+
+                this.scannerView.hideCameraOptions();
+                this.scannerView.showRunning();
+                return;
+            }
+
+            if (result.status === "camera-choice-needed") {
+                this.scannerView.showCameraOptions(result.cameras);
+                this.scannerView.showCameraChoiceNeeded();
+                return;
+            }
+        } catch (error) {
+            console.error(error);
+
+            this.scannerView.hideStarting();
+            this.scannerView.showStopped();
+            this.toastView.show("Could not start camera");
+        }
+    }
+
+    async handleMainCameraSelected(cameraId) {
+        this.scannerView.showStarting();
+
+        try {
+            const result = await this.scannerService.startWithCameraId(cameraId);
+
+            this.saveSelectedCameraId(result.cameraId);
+
+            this.scannerView.selectCamera(result.cameraId);
+            this.scannerView.hideStarting();
+            this.scannerView.showRunning();
+        } catch (error) {
+            console.error(error);
+
+            this.scannerView.hideStarting();
+            this.scannerView.showCameraChoiceNeeded();
+            this.toastView.show("Could not start selected camera");
+        }
+    }
+
+    saveSelectedCameraId(cameraId) {
+        if (!cameraId) return;
+
+        this.state.selectedCameraId = cameraId;
+        localStorage.setItem("tapcartCameraId", cameraId);
     }
 
     confirmAddProduct(productId) {

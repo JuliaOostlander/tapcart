@@ -68,5 +68,7 @@ export const els = {
   sideMenu: document.querySelector("#side-menu"),
   sideMenuClose: document.querySelector("#side-menu-close"),
   toast: document.querySelector("#toast"),
-  toggleScanner: document.querySelector("#toggle-scanner")
+  toggleScanner: document.querySelector("#toggle-scanner"),
+  cameraSelect: document.getElementById("camera-select"),
+  scannerHelpText: document.getElementById("scanner-help-text"),
 };

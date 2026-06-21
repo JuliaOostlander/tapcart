@@ -6,7 +6,8 @@ export const appSettings = {
     locale: "nl-NL",
     miniGameFastScanDurationSeconds: 45,
     miniGameFastScanDurationSecondsFinishedPopupDuration: 4,
-    scanTimeoutMs: 2500
+    scanTimeoutMs: 2500,
+    forceManualCameraSelection: false
 };
 
 export const dataSources = {

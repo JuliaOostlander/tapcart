@@ -18,7 +18,6 @@
 
 <!-- Navigation bar -->
 <header class="app-navbar">
-    <!--        <div class="navbar-content">-->
     <button id="side-menu-button" class="button side-menu-button" type="button" aria-label="Open menu">
         ☰
     </button>
@@ -91,11 +90,16 @@
         <!-- QR scanner -->
         <section class="scanner-card" aria-labelledby="scanner-title">
             <div class="scanner-toolbar">
+                <select id="camera-select" class="camera-select" hidden>
+                    <option value="">Select camera</option>
+                </select>
+
                 <button id="toggle-scanner" class="button button-scanner" type="button">
                     <i class="cil-media-play" aria-hidden="true"></i>
                     <span>Start</span>
                 </button>
             </div>
+
             <p>Allow camera access, select the right camera, then scan QRs</p>
 
             <div id="reader" class="reader-placeholder">
