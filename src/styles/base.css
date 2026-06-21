@@ -31,10 +31,10 @@ button, select {
 
 /*hero at top webpage*/
 .hero-card {
-    padding: 26px;
+    padding: 24px;
     display: flex;
     justify-content: space-between;
-    gap: 18px;
+    gap: 16px;
     align-items: center;
 }
 
@@ -55,7 +55,7 @@ button, select {
 .hero-brand-row {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
 }
 
 .hero-main {

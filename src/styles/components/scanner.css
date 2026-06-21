@@ -1,30 +1,66 @@
 #reader {
     overflow: hidden;
     border-radius: 24px;
-    min-height: 290px;
     background: #151515;
     color: white;
 }
 
-.reader-placeholder {
+#reader.reader-placeholder {
+    min-height: clamp(200px, 32vw, 360px);
     display: grid;
     place-items: center;
 }
 
-.scanner-idle {
-    text-align: center;
-    color: rgba(255, 255, 255, .7);
+#reader video {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 18px;
 }
 
-.scanner-icon {
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 12px;
-    display: grid;
-    place-items: center;
-    border: 1px solid rgba(255, 255, 255, .2);
-    border-radius: 22px;
-    font-size: 2rem;
+#reader__scan_region {
+    min-height: 0 !important;
+}
+
+#reader__dashboard, #mini-game-fast-scan-reader__dashboard {
+    padding: 8px !important;
+}
+
+#reader button,
+#reader select,
+#mini-game-fast-scan-reader button,
+#mini-game-fast-scan-reader select {
+    font-size: 0.9rem;
+}
+
+.scanner-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.scanner-toolbar h2 {
+    margin: 0;
+}
+
+.scanner-toolbar p {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.scanner-toggle-button, .scanner-toggle-button-mini-game {
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.scanner-toggle-button.is-running, .scanner-toggle-button-mini-game.is-running {
+    opacity: 0.9;
 }
 
 

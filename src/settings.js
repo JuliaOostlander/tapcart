@@ -5,8 +5,8 @@ export const appSettings = {
     currency: "EUR",
     locale: "nl-NL",
     miniGameFastScanDurationSeconds: 45,
-    miniGameFastScanDurationSecondsFinishedPopupDuration: 3,
-    scanTimeoutMs: 1500
+    miniGameFastScanDurationSecondsFinishedPopupDuration: 4,
+    scanTimeoutMs: 2500
 };
 
 export const dataSources = {

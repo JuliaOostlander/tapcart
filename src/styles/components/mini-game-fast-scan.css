@@ -7,15 +7,38 @@
 }
 
 .mini-game-fast-scan-score {
-    min-width: 74px;
-    padding: 10px 12px;
-    border-radius: 999px;
-    background: rgba(255, 196, 60, 0.14);
-    border: 1px solid rgba(255, 196, 60, 0.42);
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 0.45rem;
+
+    background: rgba(255, 196, 60, 0.22);
+    color: #151515;
+    border: 2px solid rgba(120, 78, 0, 0.7);
+
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+
+    cursor: pointer;
+}
+
+.mini-game-fast-scan-target {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 4px 0 10px;
+    color: var(--text);
+    font-weight: 700;
+    font-size: .92rem;
+}
+
+.mini-game-fast-scan-target-icon {
+    font-size: 1rem;
+    color: var(--accent);
 }
 
 .mini-game-fast-scan-label,
@@ -74,8 +97,9 @@
     padding: 12px;
     border: 1px solid var(--line);
     border-radius: 18px;
-    background: rgba(255,255,255,.58);
+    background: rgba(255, 255, 255, .58);
     text-align: left;
+    margin-bottom: 14px;
 }
 
 .mini-game-fast-scan-target-card img {
@@ -97,7 +121,7 @@
 #mini-game-fast-scan-reader {
     overflow: hidden;
     border-radius: 24px;
-    min-height: 290px;
+    min-height: clamp(220px, 34vh, 290px);
     background: #151515;
     color: white;
 }
@@ -131,7 +155,7 @@
     margin: 0 auto 20px;
 }
 
-.mini-game-fast-scan-start-button{
+.mini-game-fast-scan-start-button {
     padding: 14px;
     display: flex;
     justify-content: center;

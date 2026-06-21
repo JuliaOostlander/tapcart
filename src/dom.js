@@ -31,6 +31,7 @@ export const els = {
   manualProduct: document.querySelector("#manual-product"),
   manualTestingButton: document.querySelector("#manual-testing-button"),
   manualTestingPage: document.querySelector("#manual-testing-page"),
+  navbarHomeButton: document.querySelector("#navbar-home-button"),
   sideMenuButton: document.querySelector("#side-menu-button"),
   miniGameFastScanButton: document.querySelector("#mini-game-fast-scan-button"),
   miniGameFastScanDialog: document.getElementById("mini-game-fast-scan-dialog"),

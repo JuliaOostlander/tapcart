@@ -15,29 +15,103 @@ export class QRScannerService {
         return this.running;
     }
 
-    start() {
+    async start() {
         if (this.running) return;
 
-        //imported in index.html from https://unpkg.com/html5-qrcode
-        this.scanner = new Html5QrcodeScanner(this.readerElementId, {
+        const readerElement = document.getElementById(this.readerElementId);
+        readerElement?.classList.remove("reader-placeholder");
+        if (readerElement) readerElement.innerHTML = "";
+
+        this.scanner = new Html5Qrcode(this.readerElementId);
+
+        const config = {
             fps: 10,
-            qrbox: {width: 240, height: 240},
-            rememberLastUsedCamera: true,
-            supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
+
+            qrbox: (viewfinderWidth, viewfinderHeight) => {
+                const minEdge = Math.min(viewfinderWidth, viewfinderHeight);
+                const size = Math.min(200, Math.floor(minEdge * 0.7));
+
+                return {
+                    width: size,
+                    height: size
+                };
+            },
+
+            aspectRatio: window.innerWidth >= 700 ? 1.7777778 : 1.0
+        };
+
+        try {
+            // Prefer the rear camera.
+            await this.scanner.start(
+                {facingMode: "environment"},
+                config,
+                decodedText => this.handleScanSuccess(decodedText),
+                () => this.handleScanFailure()
+            );
+
+            this.running = true;
+        } catch (environmentCameraError) {
+            console.warn("Could not start environment camera. Trying fallback camera.", environmentCameraError);
+
+            try {
+                const cameraId = await this.findBestCameraId();
+
+                if (!cameraId) {
+                    throw new Error("No camera found.");
+                }
+
+                await this.scanner.start(
+                    {deviceId: {exact: cameraId}},
+                    config,
+                    decodedText => this.handleScanSuccess(decodedText),
+                    () => this.handleScanFailure()
+                );
+
+                this.running = true;
+            } catch (fallbackError) {
+                console.error("Could not start QR scanner.", fallbackError);
+                this.scanner = null;
+                this.running = false;
+                throw fallbackError;
+            }
+        }
+    }
+
+    async findBestCameraId() {
+        const devices = await Html5Qrcode.getCameras();
+
+        if (!devices || devices.length === 0) {
+            return null;
+        }
+
+        const backCameraWords = [
+            "back",
+            "rear",
+            "environment",
+            "world",
+            "achter",
+            "trás",
+            "arrière",
+            "rück"
+        ];
+
+        const preferredCamera = devices.find(device => {
+            const label = device.label.toLowerCase();
+            return backCameraWords.some(word => label.includes(word));
         });
 
-        this.scanner.render(
-            decodedText => this.handleScanSuccess(decodedText),
-            () => this.handleScanFailure()
-        );
-
-        this.running = true;
+        return preferredCamera?.id ?? devices[devices.length - 1].id;
     }
 
     async stop() {
         if (!this.scanner) return;
 
+        if (this.running) {
+            await this.scanner.stop();
+        }
+
         await this.scanner.clear();
+
         this.scanner = null;
         this.running = false;
     }
@@ -46,7 +120,10 @@ export class QRScannerService {
         if (this.isPaused()) return;
 
         const now = Date.now();
-        const sameRecentScan = decodedText === this.lastScan.text && now - this.lastScan.time < appSettings.scanCooldownMs;
+        const sameRecentScan =
+            decodedText === this.lastScan.text &&
+            now - this.lastScan.time < appSettings.scanCooldownMs;
+
         if (sameRecentScan) return;
 
         this.lastScan = {text: decodedText, time: now};
@@ -74,20 +151,4 @@ export class QRScannerService {
     isPaused() {
         return this.paused || Date.now() < this.pausedUntil;
     }
-
-    // isPaused() {
-    //     return this.paused || Date.now() < this.pausedUntil;
-    // }
-    //
-    // pauseFor(milliseconds) {
-    //     this.pausedUntil = Date.now() + milliseconds;
-    // }
-
-    // pauseFor(milliseconds) {
-    //     this.pausedUntil = Date.now() + milliseconds;
-    // }
-    //
-    // isPaused() {
-    //     return Date.now() < this.pausedUntil;
-    // }
 }

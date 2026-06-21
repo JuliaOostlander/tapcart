@@ -168,6 +168,11 @@ class TapCart {
             this.languageStore.setLanguage(event.target.value);
             this.toastView.show("Language saved");
         });
+
+        els.navbarHomeButton.addEventListener(
+            "click",
+            () => this.pageView.showHome()
+        )
     }
 
     handleQrScan(scannedText) {
