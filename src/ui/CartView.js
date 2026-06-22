@@ -1,4 +1,4 @@
-import {formatCoins, createCoinAmountHtml} from "../utils/formatters.js";
+import {formatCoins, createCoinAmountHtml, createDiscountedCoinAmountHtml} from "../utils/formatters.js";
 
 export class CartView {
     constructor(elements, handlers = {}) {
@@ -30,50 +30,51 @@ export class CartView {
 
     createCartItemHtml(item) {
         const isGiftItem = item.specialEffect === "easterEgg";
+        const isDiscountItem = item.specialEffect === "discountVoucher";
 
         return `
-          <article class="cart-item">
-            <img src="${item.image}" alt="${item.name}" />
-            <div class="cart-item-content">
-                <button type="button" data-open-product="${item.id}" class="cart-item-name">
-                    <h3>${item.name}</h3>
-                </button>
-            </div>
+            <article class="cart-item">
+                <img src="${item.image}" alt="${item.name}" />
+                <div class="cart-item-content">
+                    <button type="button" data-open-product="${item.id}" class="cart-item-name">
+                        <h3>${item.name}</h3>
+                    </button>
+                </div>
+                
+                <p class="cart-item-details">
+                    <span class="coin-price">
+                        <i class="cil-money coin-icon" aria-hidden="true"></i>
+                        <span>${formatCoins(item.price)} each · ${item.category}</span>
+                    </span>
+                </p>
+                
+                <div class="quantity-controls ${isGiftItem || isDiscountItem ? "is-disabled" : ""}">
+                    <button
+                        class="button quantity-button"
+                        data-action="decrease"
+                        data-product-id="${item.id}"
+                        ${isGiftItem || isDiscountItem ? "disabled" : ""}
+                        type="button"
+                        aria-label="Decrease quantity"
+                    >
+                        −
+                    </button>
+                    
+                    <span>${item.quantity}</span>
+                    
+                    <button
+                        class="button quantity-button"
+                        data-action="increase"
+                        data-product-id="${item.id}"
+                        ${isGiftItem || isDiscountItem ? "disabled" : ""}
+                        type="button"
+                        aria-label="Increase quantity"
+                    >
+                        +
+                    </button>
+                </div>
             
-            <p class="cart-item-details">
-                <span class="coin-price">
-                    <i class="cil-money coin-icon" aria-hidden="true"></i>
-                    <span>${formatCoins(item.price)} each · ${item.category}</span>
-                </span>
-            </p>
-
-            <div class="quantity-controls ${isGiftItem ? "is-disabled" : ""}">
-                <button
-                    class="button quantity-button"
-                    data-action="decrease"
-                    data-product-id="${item.id}"
-                    ${isGiftItem ? "disabled" : ""}
-                    type="button"
-                    aria-label="Decrease quantity"
-                >
-                    −
-                </button>
-
-                <span>${item.quantity}</span>
-
-                <button
-                    class="button quantity-button"
-                    data-action="increase"
-                    data-product-id="${item.id}"
-                    ${isGiftItem ? "disabled" : ""}
-                    type="button"
-                    aria-label="Increase quantity"
-                >
-                    +
-                </button>
-            </div>
-
-          </article>
+            </article>
             `;
     }
 
@@ -118,8 +119,22 @@ export class CartView {
     updateTotals(hydratedItems) {
         const count = hydratedItems.reduce((sum, item) => sum + item.quantity, 0);
         const total = hydratedItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const hasDiscountCard = hydratedItems.some(item => item.specialEffect === "discount");
 
         this.cartCount.textContent = `${count} ${count === 1 ? "product" : "products"}`;
+
+        if (hasDiscountCard) {
+            const discountedTotal = this.getDiscountedTotal(total);
+            this.totalPrice.innerHTML = createDiscountedCoinAmountHtml(total, discountedTotal);
+            return;
+        }
+
         this.totalPrice.innerHTML = createCoinAmountHtml(total);
+    }
+
+    getDiscountedTotal(total) {
+        const discountRate = 0.05;
+
+        return total * (1 - discountRate);
     }
 }

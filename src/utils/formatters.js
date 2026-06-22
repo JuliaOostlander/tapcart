@@ -19,3 +19,17 @@ export function createCoinAmountHtml(value) {
         </span>
     `;
 }
+
+export function createDiscountedCoinAmountHtml(originalValue, discountedValue) {
+    return `
+        <span class="discounted-coin-price">
+            <span class="discounted-coin-price-original">
+                ${createCoinAmountHtml(originalValue)}
+            </span>
+
+            <span class="discounted-coin-price-current">
+                ${createCoinAmountHtml(discountedValue)}
+            </span>
+        </span>
+    `;
+}

@@ -1,53 +1,48 @@
-.easter-egg-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 50;
-    display: grid;
-    place-items: center;
-    padding: 24px;
+.discount-card-celebration-popup {
+    width: min(420px, calc(100% - 28px));
+    border: 0;
+    border-radius: 34px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.discount-card-celebration-popup::backdrop {
     background:
-            radial-gradient(circle at 20% 20%, rgba(255, 224, 181, .95), transparent 30%),
-            radial-gradient(circle at 80% 70%, rgba(215, 245, 234, .95), transparent 34%),
-            rgba(23, 20, 18, .58);
-    backdrop-filter: blur(14px);
-    transition: opacity .25s ease, visibility .25s ease;
+            radial-gradient(circle at 20% 20%, rgba(255, 224, 181, .70), transparent 30%),
+            radial-gradient(circle at 80% 70%, rgba(215, 245, 234, .70), transparent 34%),
+            rgba(23, 20, 18, .42);
+    backdrop-filter: blur(8px);
 }
 
-.easter-egg-overlay.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.easter-egg-overlay.is-visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.easter-egg-card {
+.discount-celebration-card {
     position: relative;
-    width: min(420px, 100%);
+    width: 100%;
     padding: 32px 24px;
     border-radius: 34px;
     background: rgba(255, 255, 255, .94);
     box-shadow: 0 24px 80px rgba(23, 20, 18, .3);
     text-align: center;
     overflow: hidden;
-    animation: easterEggPop .45s cubic-bezier(.18, .89, .32, 1.28);
 }
 
-.easter-egg-close {
+.discount-card-celebration-popup.is-animating .discount-celebration-card {
+    animation: discountCelebrationPop .45s cubic-bezier(.18, .89, .32, 1.28);
+}
+
+.discount-card-celebration-close {
     position: absolute;
     top: 14px;
     right: 14px;
+    z-index: 1;
 }
 
-.easter-egg-icon {
+.discount-card-celebration-icon {
     font-size: 5rem;
-    animation: easterEggBounce 900ms ease-in-out infinite;
+    animation: discountCelebrationBounce 900ms ease-in-out infinite;
 }
 
-.easter-egg-card h2 {
+.discount-celebration-card h2 {
     margin: 8px 0;
     font-size: clamp(2rem, 8vw, 3.6rem);
     line-height: .95;
@@ -81,7 +76,7 @@
     animation-delay: .5s;
 }
 
-@keyframes easterEggPop {
+@keyframes discountCelebrationPop {
     from {
         opacity: 0;
         transform: translateY(18px) scale(.92);
@@ -93,7 +88,7 @@
     }
 }
 
-@keyframes easterEggBounce {
+@keyframes discountCelebrationBounce {
     0%, 100% {
         transform: translateY(0) rotate(-4deg);
     }

@@ -50,7 +50,7 @@
     color: rgba(255, 255, 255, 0.65);
 }
 
-.scanner-toggle-button, .scanner-toggle-button-mini-game {
+.scanner-toggle-button {
     border: 0;
     border-radius: 999px;
     padding: 10px 16px;
@@ -59,7 +59,7 @@
     white-space: nowrap;
 }
 
-.scanner-toggle-button.is-running, .scanner-toggle-button-mini-game.is-running {
+.scanner-toggle-button.is-running {
     opacity: 0.9;
 }
 

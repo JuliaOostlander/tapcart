@@ -1,6 +1,6 @@
 export const appSettings = {
-    animationDurationMs: 2200,
-    easterEggCelebrationDurationMs: 2200,
+    animationDurationMs: 2600,
+    easterEggCelebrationDurationMs: 3500,
     scanCooldownMs: 1600,
     currency: "EUR",
     locale: "nl-NL",

@@ -48,6 +48,10 @@ export class ProductService {
         return product?.specialEffect === "easterEgg";
     }
 
+    isDiscountVoucherProduct(product) {
+        return product?.specialEffect == "discountVoucher";
+    }
+
     getRandomProduct() {
         const index = Math.floor(Math.random() * this.getTotalAmountOfProducts());
         return this.findByIndex(index); //.products[index];

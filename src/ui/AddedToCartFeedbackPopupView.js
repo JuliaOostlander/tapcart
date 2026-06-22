@@ -35,6 +35,16 @@ export class AddedToCartFeedbackPopupView {
         });
     }
 
+    showAlreadyAddedDiscountCard() {
+        this.show({
+            image: "./assets/images/wrong-product.png",
+            imageAlt: "Wrong product",
+            category: "",
+            kicker: "Not added to cart",
+            name: "Already added discount card"
+        });
+    }
+
     show({image, imageAlt, category, kicker, name}) {
         window.clearTimeout(this.timeoutId);
 

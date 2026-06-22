@@ -70,5 +70,5 @@ export const els = {
   toast: document.querySelector("#toast"),
   toggleScanner: document.querySelector("#toggle-scanner"),
   cameraSelect: document.getElementById("camera-select"),
-  scannerHelpText: document.getElementById("scanner-help-text"),
+  discountCardCelebrationPopup: document.querySelector("#discount-card-celebration-popup")
 };

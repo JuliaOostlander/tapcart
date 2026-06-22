@@ -18,6 +18,7 @@ import {LanguageStore} from "./state/LanguageStore.js";
 //views
 import {CartView} from "./ui/CartView.js";
 import {CheckoutView} from "./ui/CheckoutView.js";
+import {DiscountCelebrationView} from "./ui/DiscountCelebrationView.js";
 import {GiftCelebrationView} from "./ui/GiftCelebrationView.js";
 import {ManualProductTestingView} from "./ui/ManualProductTestingView.js";
 import {MiniGameFastScanPopupView} from "./ui/MiniGameFastScanPopupView.js";
@@ -46,6 +47,7 @@ class TapCart {
             scannerResumeTimeoutId: null,
             language: this.languageStore.getLanguage(),
             selectedCameraId: localStorage.getItem("tapcartCameraId"),
+            hasScannedDiscountVoucher: false
         };
     }
 
@@ -65,6 +67,8 @@ class TapCart {
             onClose: () => this.unlockScanners(),
             onConfirm: () => this.generateCheckoutQr()
         });
+
+        this.discountCelebrationView = new DiscountCelebrationView(els);
 
         this.giftCelebrationView = new GiftCelebrationView(els);
 
@@ -151,6 +155,7 @@ class TapCart {
     bindEvents() {
         this.cartView.bindEvents();
         this.checkoutView.bindEvents();
+        this.discountCelebrationView.bindEvents();
         this.manualProductTestingView.bindEvents();
         this.productDetailsPopupView.bindEvents();
         this.scannedItemPopupView.bindEvents();
@@ -174,7 +179,7 @@ class TapCart {
         els.navbarHomeButton.addEventListener(
             "click",
             () => this.pageView.showHome()
-        )
+        );
     }
 
     handleQrScan(scannedText) {
@@ -421,8 +426,23 @@ class TapCart {
         this.renderCart();
 
         if (this.productService.isGiftProduct(product)) {
+            this.lockScanners();
             this.giftCelebrationView.show();
             return;
+        }
+        if (this.productService.isDiscountVoucherProduct(product)) {
+            if(this.hasScannedDiscountCard){
+                this.toastView.show("Already added discount card");
+                this.lockScanners();
+                this.addedToCartFeedbackPopupView.showAlreadyAddedDiscountCard();
+                return;
+            } else{
+                this.hasScannedDiscountCard = true;
+                this.lockScanners();
+                this.discountCelebrationView.show();
+                return;
+            }
+
         }
         this.lockScanners();
         this.addedToCartFeedbackPopupView.showProductAdded(product);

@@ -1,5 +1,39 @@
 [
   {
+    "id": "voucher-coffee-beans-001",
+    "type": "voucher",
+    "name": "Voucher: 20% off Coffee Beans",
+    "description": "Scan this voucher, then scan Coffee Beans next",
+    "appliesToProductId": "coffee-beans-001",
+    "discount": {
+      "type": "percent",
+      "value": 20
+    },
+    "specialEffect": "discount"
+  },
+  {
+    "id": "discount-card-001",
+    "name": "Discount card",
+    "category": "Special",
+    "price": 0,
+    "description": "5% discount on all products!",
+    "image": "assets/images/discount-card.png",
+    "specialEffect": "discountVoucher",
+    "allergens": [],
+    "nutriScore": "",
+    "tags": [],
+    "countryOfOrigin": "",
+    "nutrition": {
+      "energyKcal": 0,
+      "fat": 0,
+      "saturatedFat": 0,
+      "carbohydrates": 0,
+      "sugars": 0,
+      "protein": 0,
+      "salt": 0
+    }
+  },
+  {
     "id": "easter-egg-001",
     "name": "Easter egg",
     "category": "Special",
